@@ -154,7 +154,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      27_Yummy_0: 7888152329955821020
+      27_Yummy_1: -3415670848876730830
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
