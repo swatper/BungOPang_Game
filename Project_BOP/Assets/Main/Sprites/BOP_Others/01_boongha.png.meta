@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      01_boongha_0: -2432193871720784631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
