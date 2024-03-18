@@ -6,7 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     private float maxSpeed = 3f;   
     private float upwardForce = 0.8f;
-    private bool isDead = false; 
+    private bool isDead = false;
+    private bool shieldOn = false;
+    private bool coinX2 = false;
 
     private Rigidbody2D playerRigidbody; // Rigidbody2D to use
     private AudioSource playerAudio; // Audio component to use
@@ -80,8 +82,35 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.tag == "Obstacle" && !isDead)
         {
-            Die();
+
+            if (!shieldOn)
+            {
+                Die();
+            }
         }
+        if (collision.tag == "Coin" && !isDead)
+        {
+            //게임매니저로 재화 올리기.
+            if (coinX2)
+            {
+                GameManager.Instance.AddCoin(10);
+            }
+            else
+            {
+                GameManager.Instance.AddCoin(5);
+            }
+        }
+        if (collision.tag == "Shield" && !isDead)
+        {
+            shieldOn = true;
+        }
+        if (collision.tag == "CoinX2" && !isDead)
+        {
+            coinX2 = true;
+         
+            // 게임매니저가 코인 2배 메소드 실행하게 하기.
+        }
+
     }
 
 }
