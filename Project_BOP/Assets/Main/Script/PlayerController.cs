@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    // 변수
     private float maxSpeed = 3f;   
     private float upwardForce = 0.8f;
     private bool isDead = false;
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private Transform playerTransform;
     private Animator playerAnimator;
 
+    // 컴포넌트 호출
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -23,7 +25,7 @@ public class PlayerController : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
     }
 
-
+    // 플레이어 이동
     void Update()
     {
         if (isDead) // stop function if player is dead.
@@ -45,6 +47,8 @@ public class PlayerController : MonoBehaviour
             playerRigidbody.velocity = playerRigidbody.velocity*0.5f;
         }
     }
+
+    // 플레이어 회전 모션 함수 정의
     private void PlayerRotate()
     {
         if (playerRigidbody.velocityY > 1)
@@ -67,19 +71,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    // 플레이어 사망 함수 정의
     private void Die()
     {
         playerRigidbody.velocity = Vector2.zero;
         isDead = true;
         playerRigidbody.AddForce(new Vector2(0, 1250));
         playerAnimator.SetTrigger("Die");
+
+        GameManager.Instance.OnPlayerDead();
     }
 
 
-
+    // 플레이어 충돌 트리거
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // 장애물과 충돌
         if (collision.tag == "Obstacle" && !isDead)
         {
 
@@ -88,6 +95,7 @@ public class PlayerController : MonoBehaviour
                 Die();
             }
         }
+        // 코인과 충돌
         if (collision.tag == "Coin" && !isDead)
         {
             //게임매니저로 재화 올리기.
@@ -100,15 +108,16 @@ public class PlayerController : MonoBehaviour
                 GameManager.Instance.AddCoin(5);
             }
         }
+        // 쉴드 아이템과 충돌
         if (collision.tag == "Shield" && !isDead)
         {
             shieldOn = true;
         }
+        // 재화 2배 아이템과 충돌
         if (collision.tag == "CoinX2" && !isDead)
         {
             coinX2 = true;
-         
-            // 게임매니저가 코인 2배 메소드 실행하게 하기.
+            
         }
 
     }

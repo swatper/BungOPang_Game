@@ -1,3 +1,5 @@
+using JetBrains.Annotations;
+using NUnit.Framework.Internal;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,23 +12,21 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-
     public bool isGameOver = false;
-    public Text scoreText;
-    public Text newCoinText;
-    public Text totalCoinText;
+    public TMP_Text scoreText;
+    public TMP_Text CoinText;
+    public TMP_Text totalCoinText;
 
     public GameObject gameoverUI;
 
-    private int score = 0;
-    private int newCoin = 0;
+    public int score = 0;
+    public int newCoin = 0;
     private int totalCoin = 0;
-
     private int highScore = 0;
 
     private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
         }
@@ -44,30 +44,32 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+       
     }
-
+    // 점수 증가 함수 정의
     public void AddScore(int newScore)
     {
         if (!isGameOver)
         {
             score += newScore;
-            scoreText.text = ("Score: " + score).ToString();
+            scoreText.text = (score+"M").ToString();
         }
     }
+    // 재화 증가 함수 정의
     public void AddCoin(int addCoin)
     {
         if (!isGameOver)
         {
             newCoin += addCoin;
-            newCoinText.text = "Coin: " + newCoin;
+            CoinText.text = newCoin.ToString();
         }
 
     }
-
+    // 플레이어 사망 함수 정의(게임오버)
     public void OnPlayerDead()
     {
         isGameOver = true;
         gameoverUI.SetActive(true);
     }
+
 }
