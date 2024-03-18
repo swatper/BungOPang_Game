@@ -10,12 +10,13 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D playerRigidbody; // Rigidbody2D to use
     private AudioSource playerAudio; // Audio component to use
+    private Transform playerTransform;
 
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAudio = GetComponent<AudioSource>();
-
+        playerTransform = GetComponent<Transform>();
     }
 
 
@@ -25,10 +26,10 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-
+        // Press Space to fly
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //playerRigidbody.velocity = Vector2.zero; //包己x
+            playerTransform.Rotate(0, 0, 20);
         }
         if (Input.GetKey(KeyCode.Space))
         {
@@ -36,8 +37,8 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            //playerRigidbody.velocity = Vector2.zero;  //包己x
-            playerRigidbody.velocity = playerRigidbody.velocity*0.5f; //包己o
+            playerTransform.Rotate(0, 0, -20);
+            playerRigidbody.velocity = playerRigidbody.velocity*0.5f;
         }
     }
 
@@ -45,6 +46,13 @@ public class PlayerController : MonoBehaviour
     {
         playerRigidbody.velocity = Vector2.zero;
         isDead = true;
+        DyingMotion();
+    }
+
+    private void DyingMotion() // dying motion
+    {
+        playerRigidbody.AddForce(new Vector2(0, 250));
+        playerTransform.Rotate(0, 0, 180);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -54,4 +62,5 @@ public class PlayerController : MonoBehaviour
             Die();
         }
     }
+
 }
