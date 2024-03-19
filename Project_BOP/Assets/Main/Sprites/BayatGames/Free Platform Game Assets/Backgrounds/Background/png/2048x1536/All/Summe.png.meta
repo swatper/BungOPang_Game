@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-guid: 8d013f764ab602d4caee7dc1d775e63e
-AssetOrigin:
-  serializedVersion: 1
-  productId: 85838
-  packageName: Free Platform Game Assets
-  packageVersion: 1.9.4
-  assetPath: Assets/BayatGames/Free Platform Game Assets/Environments/Environments/png/All/4x/Asset
-    13.png
-  uploadId: 484258
+guid: 2b30f10baa5ad9e408c7778b2c0bc6e2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,7 +99,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 30f95304dfb071b48a6528082a3e831f
+    spriteID: 1571a1f4f30e32b43b8a34d97eddc41e
     internalID: 0
     vertices: []
     indices: 
