@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: b94b23723dfa2e84e9de0fdeb406695d
+guid: f390f0effc03cd64c8e09fd4faa570cd
 AssetOrigin:
   serializedVersion: 1
   productId: 85838
   packageName: Free Platform Game Assets
   packageVersion: 1.9.4
   assetPath: Assets/BayatGames/Free Platform Game Assets/Environments/New Details
-    ( Update 1.9 )/8x/Autumn Bush.png
+    ( Update 1.9 )/8x/Bush.png
   uploadId: 484258
 TextureImporter:
   internalIDToNameTable: []
@@ -107,7 +107,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b961d148d751ea24fb6449e91e552272
+    spriteID: 4639239aeebb25d439c2260b77de3c06
     internalID: 0
     vertices: []
     indices: 

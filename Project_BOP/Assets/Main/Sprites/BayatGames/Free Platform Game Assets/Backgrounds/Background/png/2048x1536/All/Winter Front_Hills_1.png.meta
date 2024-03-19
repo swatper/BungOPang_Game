@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-guid: 0e141e3371de4a745962f5fa234ae937
-AssetOrigin:
-  serializedVersion: 1
-  productId: 85838
-  packageName: Free Platform Game Assets
-  packageVersion: 1.9.4
-  assetPath: Assets/BayatGames/Free Platform Game Assets/Environments/New Details
-    ( Update 1.9 )/8x/Tree.png
-  uploadId: 484258
+guid: 6ff57d9caad8fed43ae5efef10d11fc1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -56,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 512
+  spritePixelsToUnits: 105
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -107,7 +99,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 34c69665ffc41cd46bd808e4bdbd18aa
+    spriteID: efab1ee651edda54a8deefe4b5e20529
     internalID: 0
     vertices: []
     indices: 

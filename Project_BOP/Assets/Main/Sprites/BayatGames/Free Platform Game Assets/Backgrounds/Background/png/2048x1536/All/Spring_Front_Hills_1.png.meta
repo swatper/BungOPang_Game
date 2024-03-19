@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: b94b23723dfa2e84e9de0fdeb406695d
+guid: 005e81849f522fd479b7662f6fc48298
 AssetOrigin:
   serializedVersion: 1
   productId: 85838
   packageName: Free Platform Game Assets
   packageVersion: 1.9.4
-  assetPath: Assets/BayatGames/Free Platform Game Assets/Environments/New Details
-    ( Update 1.9 )/8x/Autumn Bush.png
+  assetPath: Assets/BayatGames/Free Platform Game Assets/Backgrounds/New Background
+    ( Update 1.7 )/png/2048x1536/All/Hills_1.png
   uploadId: 484258
 TextureImporter:
   internalIDToNameTable: []
@@ -56,7 +56,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 512
+  spritePixelsToUnits: 105
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -107,7 +107,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b961d148d751ea24fb6449e91e552272
+    spriteID: efab1ee651edda54a8deefe4b5e20529
     internalID: 0
     vertices: []
     indices: 

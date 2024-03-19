@@ -5,34 +5,48 @@ using UnityEngine.Tilemaps;
 
 public class BackGround_Scroller : MonoBehaviour
 {
-    public float groundSpeed; //Speed of Ground
-    public SpriteRenderer oldObjectSprite; //Target Object's Old Sprite
-    public Sprite newObjextSprite01;       //Target Object's New Sprite
+    public SpriteRenderer oldObjectSprite;   //Object's Old Sprite
+    public Sprite[] newObjextSprite01;       //Object's New Sprite Array
+    public float playSpeed;                 //Speed of Ground
+    private int spriteIndex = 1;            //Sprite Array's index
+    private float seasonChangeTime = 5f;   //PlayTime to chage Season
+
     void Start()
     {
         oldObjectSprite = GetComponent<SpriteRenderer>();
     }
-    private void FixedUpdate() //Increas speed
+
+    private void FixedUpdate() 
     {
-        
+        transform.Translate(playSpeed * Time.fixedDeltaTime * -1f, 0, 0);
+        seasonChangeTime-= Time.fixedDeltaTime;
     }
     void Update()
     {
-        transform.Translate(groundSpeed * Time.deltaTime * -1f, 0, 0);
+        //After 10 seconds, Change Sprite(= Change Seasons)
+        if (seasonChangeTime < 0f)
+        {
+            ChangeSprite();
+            Debug.Log("Season Canged!!");
+            seasonChangeTime = 5f;
+        }
     }
+
+    //Replace the backGround object
     private void LateUpdate()
     {
-        if (transform.position.x <= -18) { //Replace Ground
+        if (transform.position.x <= -18) { 
             transform.Translate(36f, 0, 0,Space.Self);
-            switch (transform.tag)
-            {
-                case "Tree":
-                    //Image Change
-                    oldObjectSprite.sprite = newObjextSprite01;
-                    break;
-                default:
-                    break;
-            }
+        }
+    }
+
+    //Change backGroud obeject sprite funtion
+    public void ChangeSprite() {
+        oldObjectSprite.sprite = newObjextSprite01[spriteIndex];
+        spriteIndex += 1;
+        if (spriteIndex >= 4)
+        {
+            spriteIndex = 0;
         }
     }
 }

@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-guid: b94b23723dfa2e84e9de0fdeb406695d
-AssetOrigin:
-  serializedVersion: 1
-  productId: 85838
-  packageName: Free Platform Game Assets
-  packageVersion: 1.9.4
-  assetPath: Assets/BayatGames/Free Platform Game Assets/Environments/New Details
-    ( Update 1.9 )/8x/Autumn Bush.png
-  uploadId: 484258
+guid: 8a7ba5aef11a68649bbb98fbf6dda0ff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
