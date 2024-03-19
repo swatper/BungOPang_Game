@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float maxSpeed = 3f;   
+    private float maxSpeed = 3f;
     private float upwardForce = 0.8f;
-    private bool isDead = false; 
+    private bool isDead = false;
 
     private Rigidbody2D playerRigidbody; // Rigidbody2D to use
     private AudioSource playerAudio; // Audio component to use
@@ -36,11 +36,11 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            playerRigidbody.AddForce(Vector2.up*upwardForce, ForceMode2D.Impulse);
+            playerRigidbody.AddForce(Vector2.up * upwardForce, ForceMode2D.Impulse);
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            playerRigidbody.velocity = playerRigidbody.velocity*0.5f;
+            playerRigidbody.velocity = playerRigidbody.velocity * 0.5f;
         }
     }
     private void PlayerRotate()
@@ -51,13 +51,13 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("Down", false);
             playerAnimator.SetBool("Idle", false);
         }
-        if(playerRigidbody.velocityY < -1)
+        if (playerRigidbody.velocityY < -1)
         {
             playerAnimator.SetBool("Up", false);
             playerAnimator.SetBool("Down", true);
             playerAnimator.SetBool("Idle", false);
         }
-        if(playerRigidbody.velocityY < 1 && playerRigidbody.velocityY > -1)
+        if (playerRigidbody.velocityY < 1 && playerRigidbody.velocityY > -1)
         {
             playerAnimator.SetBool("Up", false);
             playerAnimator.SetBool("Down", false);
@@ -83,5 +83,4 @@ public class PlayerController : MonoBehaviour
             Die();
         }
     }
-
 }

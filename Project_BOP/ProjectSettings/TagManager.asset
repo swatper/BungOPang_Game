@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Obstacle
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: MiddleLayer
+    uniqueID: 3780809907
+    locked: 0
+  - name: MainLayer
+    uniqueID: 4130477235
     locked: 0
