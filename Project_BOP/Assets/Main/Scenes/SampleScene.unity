@@ -564,6 +564,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &370010678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 370010680}
+  - component: {fileID: 370010679}
+  m_Layer: 0
+  m_Name: SpawnObstacle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &370010679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370010678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb6c871858f3c3488500ec1ad4d0287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefab:
+  - {fileID: 2730990542115376186, guid: 7e3c7c639256e264cb2273189b06510f, type: 3}
+  - {fileID: 688943070405836470, guid: 188bc8b8f5da2364b902bcc85ac00cf0, type: 3}
+  - {fileID: 1616950056387576232, guid: 6f8822276947be64eb5d9d950ea70fef, type: 3}
+  - {fileID: 5944093894727543769, guid: 522513fe667e15b4685571fd38dbfeff, type: 3}
+--- !u!4 &370010680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370010678}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.724725, y: -1.0147384, z: -0.019307062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &379046764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2974,7 +3023,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -5225540622116197949, guid: c7e3e04409caf864f9b7fba94ebcb77d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -3948,3 +3997,4 @@ SceneRoots:
   - {fileID: 1304203852}
   - {fileID: 819218875}
   - {fileID: 1254126521}
+  - {fileID: 370010680}
