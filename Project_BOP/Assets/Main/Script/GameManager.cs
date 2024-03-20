@@ -14,8 +14,11 @@ public class GameManager : MonoBehaviour
 
     public bool isGameOver = false;
     public TMP_Text scoreText;
+    public TMP_Text highScoreText;
     public TMP_Text CoinText;
     public TMP_Text totalCoinText;
+    public TMP_Text gameoverCoinText;
+    public TMP_Text gameoverScoreText;
 
     public GameObject gameoverUI;
 
@@ -70,6 +73,8 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
         gameoverUI.SetActive(true);
+        gameoverCoinText.text = ("@: " + newCoin).ToString();
+        gameoverScoreText.text = ("Score: "+score).ToString();
     }
 
 }

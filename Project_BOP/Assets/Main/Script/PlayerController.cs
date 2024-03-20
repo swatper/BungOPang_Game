@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -7,18 +8,20 @@ public class PlayerController : MonoBehaviour
     private float maxSpeed = 3f;
     private float upwardForce = 0.8f;
     private bool isDead = false;
-
+    private bool shieldOn = false;
     private Rigidbody2D playerRigidbody; // Rigidbody2D to use
     private AudioSource playerAudio; // Audio component to use
     private Transform playerTransform;
     private Animator playerAnimator;
-
+    private SpriteRenderer playerSpriteRenderer;
+    public Sprite[] playerSprite;
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAudio = GetComponent<AudioSource>();
         playerTransform = GetComponent<Transform>();
         playerAnimator = GetComponent<Animator>();
+        playerSpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
 
@@ -72,15 +75,39 @@ public class PlayerController : MonoBehaviour
         isDead = true;
         playerRigidbody.AddForce(new Vector2(0, 1250));
         playerAnimator.SetTrigger("Die");
+        GameManager.Instance.OnPlayerDead();
     }
 
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag == "Shield" && !isDead)
+        {
+            shieldOn = true;
+            playerSpriteRenderer.sprite = playerSprite[1];
+        }
         if (collision.tag == "Obstacle" && !isDead)
         {
-            Die();
+            if (shieldOn)
+            {
+                playerSpriteRenderer.color = new Color(1, 1, 1, 0.4f);
+                playerSpriteRenderer.sprite = playerSprite[0];
+                Invoke("ShieldOff", 2);
+            }
+            else
+            {
+                Die();
+            }
         }
     }
+
+    private void ShieldOff()
+    {
+        playerSpriteRenderer.color = new Color(1, 1, 1, 1f);
+        shieldOn = false;
+    }
+
+
+
 }
