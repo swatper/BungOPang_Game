@@ -64,5 +64,4 @@ public class BackGround_Scroller : MonoBehaviour
         }
         return;
     }
-    
 }

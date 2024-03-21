@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2730990542115376186}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.61598384, y: -2.9, z: 0}
+  m_LocalPosition: {x: 0, y: -2.9, z: 0}
   m_LocalScale: {x: 0.37095565, y: 0.37095565, z: 0.37095565}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6079fda1d46e5964c99377add47c71fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 10
   bound: 8
 --- !u!60 &2640353432713702965
 PolygonCollider2D:

@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class SpawnObstacle : MonoBehaviour
 {
-    public GameObject[] obstaclePrefab;
+    public GameObject[] obstaclePrefab;     //Obstracle Array
+    public float obstacleSpeed = 7f;
 
     void Start()
     {
@@ -30,15 +31,15 @@ public class SpawnObstacle : MonoBehaviour
 
         if (newObstacle == true)
         {
-            if (obstacleIndex == 0)
+            if (obstacleIndex == 0)         //0 index-> ground obstacle
             {
                 spawnPos.y = -3.6f;
             }
-            else if (obstacleIndex == 3)
+            else if (obstacleIndex == 3)    //1 index-> floor obstacle
             {
                 spawnPos.y = 4.2f;
             }
-            else spawnPos.y = Random.Range(0, 2);
+            else spawnPos.y = Random.Range(0, 2);//else -> floating in air obstacle
         }
 
         Instantiate(newObstacle, spawnPos, newObstacle.transform.rotation);

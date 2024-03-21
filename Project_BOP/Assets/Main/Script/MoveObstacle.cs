@@ -5,10 +5,10 @@ using UnityEngine;
 public class MoveObstacle : MonoBehaviour
 {
     //int destroyObs = 0;
-    public float speed = 10.0f;
+    public float speed;
     public float bound = -20f;
 
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate( Vector3.left * speed * Time.deltaTime, Space.World);
 
@@ -17,4 +17,5 @@ public class MoveObstacle : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
 }

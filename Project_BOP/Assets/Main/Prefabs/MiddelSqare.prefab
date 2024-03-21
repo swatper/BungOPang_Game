@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1514316371399875150}
   - component: {fileID: 6973691017477472377}
-  - component: {fileID: 5668920776835731342}
   - component: {fileID: 7634259927567466456}
+  - component: {fileID: 6872923729621306608}
   m_Layer: 0
   m_Name: MiddelSqare
   m_TagString: Untagged
@@ -88,20 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5668920776835731342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616950056387576232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6079fda1d46e5964c99377add47c71fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  bound: -10
 --- !u!60 &7634259927567466456
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -153,3 +139,17 @@ PolygonCollider2D:
       - {x: 2.56, y: -2.56}
       - {x: 2.56, y: 2.56}
   m_UseDelaunayMesh: 0
+--- !u!114 &6872923729621306608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616950056387576232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6079fda1d46e5964c99377add47c71fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  bound: -10

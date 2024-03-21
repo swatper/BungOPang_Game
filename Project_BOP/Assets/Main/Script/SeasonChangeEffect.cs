@@ -9,8 +9,8 @@ public class SeasonChangeEffect : MonoBehaviour
 {
     private float seasonChangeTime = 11f;    //Time to chage Season(same with season chage time)
     public float waveSpeed;                 //Sprite moving speed(more than other BackGround Spitres' speed)
-    public float upSpeed = 0.7f;
-    public int ChangeTimes = 0;
+    public float upSpeed = 0.7f;            //Gap of Increase Speed
+    public int ChangeTimes = 0;             //
     public bool isGameOver = false;        //Check GamePlay Status
     public GameObject changeEffect;         //Wave's sprite
 
@@ -41,7 +41,7 @@ public class SeasonChangeEffect : MonoBehaviour
         //Set the wave's postion
         changeEffect.transform.Translate(56f, 0f, 0f);
         //Set the Wave's speed
-        waveSpeed = 20f + ChangeTimes * ChangeTimes;
+        waveSpeed = 20f + ChangeTimes * upSpeed;
         return;
     }
 }
