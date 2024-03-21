@@ -11,7 +11,6 @@ public class BackGround_Scroller : MonoBehaviour
     private int spriteIndex = 1;            //Sprite Array's index
     private float seasonChangeTime = 11f;   //Time to chage Season
     public bool isGameOver = false;        //Check GamePlay Status
-    private float crossfadeDuration = 1.0f; // Crossfade duration in seconds
 
     void Start()
     {
