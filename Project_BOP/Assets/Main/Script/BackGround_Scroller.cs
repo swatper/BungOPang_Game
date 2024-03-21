@@ -20,15 +20,14 @@ public class BackGround_Scroller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Decrease time
-        seasonChangeTime -= Time.fixedDeltaTime;
-
-        transform.Translate(playSpeed * Time.deltaTime * -1f, 0, 0);
         //Stop scrolling
         if (isGameOver)
         {
-            playSpeed = 0;
+            return;
         }
+        //Decrease time
+        seasonChangeTime -= Time.fixedDeltaTime;
+        transform.Translate(playSpeed * Time.deltaTime * -1f, 0, 0);
     }
     void Update()
     {
@@ -38,6 +37,7 @@ public class BackGround_Scroller : MonoBehaviour
             //Call sprite change funtion, after 0.5 seconds later
             Invoke("ChangeSeason" , 1.25f);
             seasonChangeTime = 11f;
+            playSpeed += 0.7f;
         }
     }
 
