@@ -19,19 +19,18 @@ public class GameManager : MonoBehaviour
     public TMP_Text totalCoinText;
     public TMP_Text gameoverCoinText;
     public TMP_Text gameoverScoreText;
-
     public GameObject gameoverUI;
 
-    public int score = 0;
+    public float score = 0;
     public int newCoin = 0;
     private int totalCoin = 0;
     private int highScore = 0;
-
+    private int oldCoin;
     private void Awake()
     {
         if (Instance == null)
         {
-            Instance = this;
+            Instance = this; // Create if Game Manager is not exist.
         }
         else
         {
@@ -45,17 +44,21 @@ public class GameManager : MonoBehaviour
         
     }
 
-    void Update()
+    void FixedUpdate()
     {
-       
+        if (isGameOver)
+        {
+            return;
+        }
+        AddScore(Time.deltaTime); // 
     }
     // 점수 증가 함수 정의
-    public void AddScore(int newScore)
+    public void AddScore(float newScore)
     {
         if (!isGameOver)
         {
-            score += newScore;
-            scoreText.text = ("Score: "+score).ToString();
+            score += newScore*12;
+            scoreText.text = ("Score: "+(int)score).ToString();
         }
     }
     // 재화 증가 함수 정의
@@ -74,7 +77,25 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
         gameoverUI.SetActive(true);
         gameoverCoinText.text = ("@: " + newCoin).ToString();
-        gameoverScoreText.text = ("Score: "+score).ToString();
+        gameoverScoreText.text = ("Score: "+(int)score).ToString();
+        if (score > highScore)
+        {
+            highScore = (int)score;
+            highScoreText.text = ("High Score:"+ highScore).ToString();
+        }
     }
+
+    public void CoinX2()
+    {
+        oldCoin = Coin.coinNumber;
+        Coin.ChangeCoin(4);
+        Invoke("rollbackCoin", 5);
+    }
+
+    private void rollbackCoin()
+    {
+        Coin.ChangeCoin(oldCoin);
+    }
+
 
 }

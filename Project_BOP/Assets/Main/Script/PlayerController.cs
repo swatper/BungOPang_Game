@@ -32,35 +32,32 @@ public class PlayerController : MonoBehaviour
             return;
         }
         PlayerRotate();
-        // Press Space to fly
-        if (Input.GetKeyDown(KeyCode.Space))
+        
+        // Press Space to fly)
+        if (Input.GetKey(KeyCode.Space)) 
         {
-
-        }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            playerRigidbody.AddForce(Vector2.up * upwardForce, ForceMode2D.Impulse);
+            playerRigidbody.AddForce(Vector2.up * upwardForce, ForceMode2D.Impulse); // Rise while pressing the space bar
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
             playerRigidbody.velocity = playerRigidbody.velocity * 0.5f;
         }
     }
-    private void PlayerRotate()
+    private void PlayerRotate() // Player animation transformation
     {
-        if (playerRigidbody.velocityY > 1)
+        if (playerRigidbody.velocityY > 1) //Play Up animation when player velocityY is greater than 1
         {
             playerAnimator.SetBool("Up", true);
             playerAnimator.SetBool("Down", false);
             playerAnimator.SetBool("Idle", false);
         }
-        if (playerRigidbody.velocityY < -1)
+        if (playerRigidbody.velocityY < -1) //Play Down animation when player velocityY is lower than -1
         {
             playerAnimator.SetBool("Up", false);
             playerAnimator.SetBool("Down", true);
             playerAnimator.SetBool("Idle", false);
         }
-        if (playerRigidbody.velocityY < 1 && playerRigidbody.velocityY > -1)
+        if (playerRigidbody.velocityY < 1 && playerRigidbody.velocityY > -1)//Play Down animation when player velocityY is  than greater than -1 or lower than 1
         {
             playerAnimator.SetBool("Up", false);
             playerAnimator.SetBool("Down", false);
@@ -69,23 +66,27 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void Die()
+    private void Die() // Function that runs when a player dies
     {
         playerRigidbody.velocity = Vector2.zero;
         isDead = true;
         playerRigidbody.AddForce(new Vector2(0, 1250));
-        playerAnimator.SetTrigger("Die");
-        GameManager.Instance.OnPlayerDead();
+        playerAnimator.SetTrigger("Die"); //Play Die animation by setting the animator trigger to "Die"
+        GameManager.Instance.OnPlayerDead(); //Run the "OnPlayerDead()" function in GameManager
     }
 
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) //
     {
         if (collision.tag == "Shield" && !isDead)
         {
             shieldOn = true;
             playerSpriteRenderer.sprite = playerSprite[1];
+        }
+        if (collision.tag == "CoinX2" && !isDead)
+        {
+            GameManager.Instance.CoinX2();
         }
         if (collision.tag == "Obstacle" && !isDead)
         {

@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Coin
   - Shield
+  - CoinX2
   layers:
   - Default
   - TransparentFX
