@@ -11,15 +11,13 @@ public class SpawnObstacle : MonoBehaviour
     {
         // Invoke the spawnObstacle function 
 
-        InvokeRepeating("spawnObstacle", Time.deltaTime *  10.0f, Time.deltaTime * 30.0f);
+        InvokeRepeating("spawnObstacle", Time.deltaTime *  10.0f, Time.deltaTime * 57.0f);
     }
 
 
     void spawnObstacle()  
     {
-        //
-
-        float x = transform.position.x;
+        float x = transform.position.x + Random.Range(13, 16);
         float y = Random.Range(-3f, 4f);
         float z = transform.position.z;
         Vector3 spawnPos = new Vector3(x, y, z);
@@ -34,7 +32,7 @@ public class SpawnObstacle : MonoBehaviour
         {
             if (obstacleIndex == 0)
             {
-                spawnPos.y = -3.05f;
+                spawnPos.y = -3.6f;
             }
             else if (obstacleIndex == 3)
             {

@@ -26,15 +26,16 @@ public class SeasonChangeEffect : MonoBehaviour
     }
     void FixedUpdate()
     {
-        //Stop Moving
-        if (changeEffect.transform.position.x < -36f || isGameOver)
-        {
-            return;
-        }
         //Wave's Moving, before Seanson Change
         changeEffect.transform.Translate(waveSpeed * Time.deltaTime * -1f, 0, 0);
         //Decrease Time
         seasonChangeTime -= Time.deltaTime;
+
+        //Stop Moving
+        if (changeEffect.transform.position.x < -29.1f)
+        {
+            waveSpeed = 0f;
+        }
     }
     void ChangeEffect() {
         //Set the wave's postion
