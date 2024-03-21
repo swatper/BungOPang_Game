@@ -17,5 +17,10 @@ public class MoveObstacle : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+    public void SetSpeed(float speed) { 
+        this.speed = speed;
+    }
+    public void DestroyObstacle() {
+        Destroy(gameObject);
+    }
 }

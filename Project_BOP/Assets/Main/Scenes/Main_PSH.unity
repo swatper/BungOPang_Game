@@ -1609,7 +1609,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6005b648ddceefe46b0d0320ba96c8c6, type: 3}
   - {fileID: 21300000, guid: 3db354165a4809e4fbdab2816db81297, type: 3}
   - {fileID: 21300000, guid: 81720abf9497de840a457ce9a9d82e2f, type: 3}
-  playSpeed: 9.5
+  playSpeed: 10
   isGameOver: 0
 --- !u!212 &629375266
 SpriteRenderer:
@@ -3230,7 +3230,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f390f0effc03cd64c8e09fd4faa570cd, type: 3}
   - {fileID: 21300000, guid: b94b23723dfa2e84e9de0fdeb406695d, type: 3}
   - {fileID: 21300000, guid: 8a7ba5aef11a68649bbb98fbf6dda0ff, type: 3}
-  playSpeed: 9.5
+  playSpeed: 10
   isGameOver: 0
 --- !u!212 &1110786441
 SpriteRenderer:
@@ -3592,7 +3592,7 @@ MonoBehaviour:
   newObjextSprite01:
   - {fileID: 21300000, guid: 2c91c76cdb5e9fc49a8aacde4e4392ec, type: 3}
   - {fileID: 21300000, guid: 3e327807604934e46b94954b32b8f1b4, type: 3}
-  - {fileID: 21300000, guid: fd090bc2c85a99149b27e01c9b675b8e, type: 3}
+  - {fileID: 21300000, guid: 24991558d8202c54fb61637f82c1dfe0, type: 3}
   - {fileID: 21300000, guid: 82e70c4a2967fc647bf090bd49a0284b, type: 3}
   playSpeed: 1.5
   isGameOver: 0
@@ -4064,7 +4064,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6005b648ddceefe46b0d0320ba96c8c6, type: 3}
   - {fileID: 21300000, guid: 3db354165a4809e4fbdab2816db81297, type: 3}
   - {fileID: 21300000, guid: 81720abf9497de840a457ce9a9d82e2f, type: 3}
-  playSpeed: 9.5
+  playSpeed: 10
   isGameOver: 0
 --- !u!212 &1299824818
 SpriteRenderer:
@@ -4169,6 +4169,7 @@ MonoBehaviour:
   - {fileID: 1616950056387576232, guid: 6f8822276947be64eb5d9d950ea70fef, type: 3}
   - {fileID: 688943070405836470, guid: 188bc8b8f5da2364b902bcc85ac00cf0, type: 3}
   - {fileID: 5944093894727543769, guid: 522513fe667e15b4685571fd38dbfeff, type: 3}
+  obstacleSpeed: 10
 --- !u!1 &1360157327
 GameObject:
   m_ObjectHideFlags: 0
@@ -4226,7 +4227,7 @@ GameObject:
   - component: {fileID: 1374289659}
   - component: {fileID: 1374289660}
   m_Layer: 0
-  m_Name: BOP
+  m_Name: BOP???
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5951,7 +5952,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f390f0effc03cd64c8e09fd4faa570cd, type: 3}
   - {fileID: 21300000, guid: b94b23723dfa2e84e9de0fdeb406695d, type: 3}
   - {fileID: 21300000, guid: 8a7ba5aef11a68649bbb98fbf6dda0ff, type: 3}
-  playSpeed: 9.5
+  playSpeed: 10
   isGameOver: 0
 --- !u!212 &1989888523
 SpriteRenderer:
@@ -6058,7 +6059,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f390f0effc03cd64c8e09fd4faa570cd, type: 3}
   - {fileID: 21300000, guid: b94b23723dfa2e84e9de0fdeb406695d, type: 3}
   - {fileID: 21300000, guid: 8a7ba5aef11a68649bbb98fbf6dda0ff, type: 3}
-  playSpeed: 9.5
+  playSpeed: 10
   isGameOver: 0
 --- !u!212 &2006013192
 SpriteRenderer:

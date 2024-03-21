@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 50348643650801098}
   - component: {fileID: 6206715217372665882}
   m_Layer: 0
-  m_Name: UnderSqare1
+  m_Name: Obstacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

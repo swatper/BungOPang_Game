@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7634259927567466456}
   - component: {fileID: 6872923729621306608}
   m_Layer: 0
-  m_Name: MiddelSqare
+  m_Name: Obstacle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
