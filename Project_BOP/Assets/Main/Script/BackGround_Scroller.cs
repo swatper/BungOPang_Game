@@ -9,44 +9,61 @@ public class BackGround_Scroller : MonoBehaviour
     public Sprite[] newObjextSprite01;       //Object's New Sprite Array
     public float playSpeed;                 //Speed of Ground
     private int spriteIndex = 1;            //Sprite Array's index
-    private float seasonChangeTime = 5f;   //PlayTime to chage Season
+    private float seasonChangeTime = 11f;   //Time to chage Season
+    public bool isGameOver = false;        //Check GamePlay Status
+    private float crossfadeDuration = 1.0f; // Crossfade duration in seconds
 
     void Start()
     {
         oldObjectSprite = GetComponent<SpriteRenderer>();
     }
 
-    private void FixedUpdate() 
+    private void FixedUpdate()
     {
-        transform.Translate(playSpeed * Time.fixedDeltaTime * -1f, 0, 0);
-        seasonChangeTime-= Time.fixedDeltaTime;
+        //Decrease time
+        seasonChangeTime -= Time.fixedDeltaTime;
+
+        transform.Translate(playSpeed * Time.deltaTime * -1f, 0, 0);
+        //Stop scrolling
+        if (isGameOver)
+        {
+            playSpeed = 0;
+        }
     }
     void Update()
     {
-        //After 10 seconds, Change Sprite(= Change Seasons)
+        //Change Sprite(= Change Seasons)
         if (seasonChangeTime < 0f)
         {
-            ChangeSprite();
-            Debug.Log("Season Canged!!");
-            seasonChangeTime = 5f;
+            //Call sprite change funtion, after 0.5 seconds later
+            Invoke("ChangeSeason" , 1.25f);
+            seasonChangeTime = 11f;
         }
     }
 
-    //Replace the backGround object
+    //Replace BackGround object
     private void LateUpdate()
     {
-        if (transform.position.x <= -18) { 
-            transform.Translate(36f, 0, 0,Space.Self);
+        if (transform.position.x <= -18)
+        {
+            transform.Translate(36f, 0, 0, Space.Self);
         }
     }
 
-    //Change backGroud obeject sprite funtion
-    public void ChangeSprite() {
+    //Change BackGroud obeject sprite funtion
+    public void ChangeSeason()
+    {
+        if (newObjextSprite01.Length == 0)
+        {
+            return;
+        }
         oldObjectSprite.sprite = newObjextSprite01[spriteIndex];
         spriteIndex += 1;
         if (spriteIndex >= 4)
         {
             spriteIndex = 0;
         }
+        return;
     }
+    
 }
