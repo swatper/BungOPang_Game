@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   bound: -10
+  isGameover: 0
 --- !u!60 &4851017923359958636
 PolygonCollider2D:
   m_ObjectHideFlags: 0
