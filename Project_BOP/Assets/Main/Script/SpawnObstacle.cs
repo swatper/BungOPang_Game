@@ -19,7 +19,8 @@ public class SpawnObstacle : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isGameOver) {
+        if (GameManager.Instance.isGameOver)
+        {
             return;
         }
         //Decrease time

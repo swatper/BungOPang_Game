@@ -28,6 +28,9 @@ public class Coin : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (GameManager.Instance.isGameOver) {
+            return;
+        }
         transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
         if (transform.position.x < -10f)
         {

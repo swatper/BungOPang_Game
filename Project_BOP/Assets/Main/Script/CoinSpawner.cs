@@ -52,15 +52,9 @@ public  class CoinSpawner : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        /*if (Input.GetMouseButtonDown(0))
-        {
-            SpawnCoin();
+        if (GameManager.Instance.isGameOver) {
+            return;
         }
-        if (Input.GetMouseButtonDown(1))
-        {
-            RainbowCoin();
-        }*/
-
         UpdateCoin();
         levelingCoin();
         //Decrease time

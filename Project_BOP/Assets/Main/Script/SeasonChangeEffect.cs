@@ -11,7 +11,7 @@ public class SeasonChangeEffect : MonoBehaviour
     public float waveSpeed;                 //Sprite moving speed(more than other BackGround Spitres' speed)
     public float upSpeed = 0.7f;            //Gap of Increase Speed
     public int ChangeTimes = 0;             //
-    public bool isGameOver = false;        //Check GamePlay Status
+    //public bool isGameOver = false;        //Check GamePlay Status
     public GameObject changeEffect;         //Wave's sprite
 
     private void Update()
@@ -26,6 +26,10 @@ public class SeasonChangeEffect : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (GameManager.Instance.isGameOver)
+        {
+            return;
+        }
         //Wave's Moving, before Seanson Change
         changeEffect.transform.Translate(waveSpeed * Time.deltaTime * -1f, 0, 0);
         //Decrease Time

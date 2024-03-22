@@ -12,11 +12,12 @@ public class Swap_Ground : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Decrease Time
-        if (!isGameOver)
+        if (GameManager.Instance.isGameOver)
         {
-            seasonChangeTime -= Time.deltaTime;
+            return;
         }
+        //Decrease Time
+            seasonChangeTime -= Time.deltaTime;
     }
 
     // Update is called once per frame
