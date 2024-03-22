@@ -13,8 +13,8 @@ public class Coin : MonoBehaviour
         Gold,
         Rainbow
     }
-    static public int coinNumber;
-    static public coinStates currentState;
+    public int coinNumber;
+    public coinStates currentState;
     public SpriteRenderer coinSpriteRenderer;
     public Sprite[] coinSprite;
     // Start is called before the first frame update
@@ -80,7 +80,7 @@ public class Coin : MonoBehaviour
         Destroy(gameObject);
     }
 
-    static public void ChangeCoin(int newCoinNumber)
+    public void ChangeCoin(int newCoinNumber)
     {
         switch (newCoinNumber)
         {

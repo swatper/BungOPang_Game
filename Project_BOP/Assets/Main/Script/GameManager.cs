@@ -50,15 +50,21 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-        AddScore(Time.deltaTime); // 
+        AddScore(); // 
     }
     // 점수 증가 함수 정의
-    public void AddScore(float newScore)
+    public void AddScore()
     {
         if (!isGameOver)
         {
-            score += newScore*12;
+            
+            score += (Time.deltaTime * 12);
             scoreText.text = ("Score: "+(int)score).ToString();
+        }
+        if (score > highScore)
+        {
+            highScore = (int)score;
+            highScoreText.text = ("High Score: " + highScore).ToString();
         }
     }
     // 재화 증가 함수 정의
@@ -83,19 +89,7 @@ public class GameManager : MonoBehaviour
             highScore = (int)score;
             highScoreText.text = ("High Score:"+ highScore).ToString();
         }
+        totalCoin += newCoin;
+        totalCoinText.text = ("Total coin: " + totalCoin).ToString();
     }
-
-    public void CoinX2()
-    {
-        oldCoin = Coin.coinNumber;
-        Coin.ChangeCoin(4);
-        Invoke("rollbackCoin", 5);
-    }
-
-    private void rollbackCoin()
-    {
-        Coin.ChangeCoin(oldCoin);
-    }
-
-
 }

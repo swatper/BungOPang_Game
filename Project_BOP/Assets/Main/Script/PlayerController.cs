@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float maxSpeed = 3f;
+
     private float upwardForce = 0.8f;
     private bool isDead = false;
     private bool shieldOn = false;
@@ -84,9 +84,9 @@ public class PlayerController : MonoBehaviour
             shieldOn = true;
             playerSpriteRenderer.sprite = playerSprite[1];
         }
-        if (collision.tag == "CoinX2" && !isDead)
+        if (collision.tag == "Flex" && !isDead)
         {
-            GameManager.Instance.CoinX2();
+            CoinSpawner.coinSpawner.RainbowCoin();
         }
         if (collision.tag == "Obstacle" && !isDead)
         {
