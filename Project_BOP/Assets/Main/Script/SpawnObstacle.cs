@@ -9,15 +9,14 @@ public class SpawnObstacle : MonoBehaviour
 
     void Start()
     {
-        // Invoke the spawnObstacle function 
-
+        // repeat spawnObstacle 
         InvokeRepeating("spawnObstacle", Time.deltaTime *  10.0f, Time.deltaTime * 30.0f);
     }
 
 
     void spawnObstacle()  
     {
-        //
+        // define Vector3 spawnPos
 
         float x = transform.position.x;
         float y = Random.Range(-3f, 4f);
