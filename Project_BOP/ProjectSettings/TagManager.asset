@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - BackGround
-  - Obstacle
-  - Coin
-  - Shield
-  - Flex
->>>>>>> V1__Player
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -21,9 +14,9 @@ TagManager:
   - 
   - 
   - 
-  - Obstacle
-  - Player
-  - PlayerDamaged
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -47,10 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: MiddleLayer
-    uniqueID: 3780809907
-    locked: 0
-  - name: MainLayer
-    uniqueID: 4130477235
     locked: 0
