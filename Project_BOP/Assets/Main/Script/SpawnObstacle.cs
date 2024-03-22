@@ -48,18 +48,23 @@ public class SpawnObstacle : MonoBehaviour
             {
                 spawnPos.y = -3.6f;
             }
-            else if (obstacleIndex == 3)    //1 index-> floor obstacle
+            else if (obstacleIndex == 2)
+            {
+                spawnPos.y = -2.5f;
+            }
+            else if (obstacleIndex == 3)
+            {
+                spawnPos.y = Random.Range(0, 2);//else -> floating in air obstacle
+            }
+            else if (obstacleIndex == 4)    //1 index-> floor obstacle
             {
                 spawnPos.y = 4.3f;
             }
-            else spawnPos.y = Random.Range(0, 2);//else -> floating in air obstacle
         }
         //Activate obstacle
         GameObject inGameObstacle = Instantiate(newObstacle, spawnPos, newObstacle.transform.rotation);
         inGameObstacle.transform.parent = transform;
         //Set activating obstacle's speed
         inGameObstacle.GetComponent<MoveObstacle>().SetSpeed(obstacleSpeed);
-
     }
-   
 }

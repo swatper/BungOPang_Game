@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BronzeCoin_0: 8485202650169963015
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

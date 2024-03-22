@@ -178,7 +178,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RainbowCoin_0: -2272546963272870979
+      RainbowCoin_1: -4938290090134366675
+      RainbowCoin_2: 8025754083781739728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
