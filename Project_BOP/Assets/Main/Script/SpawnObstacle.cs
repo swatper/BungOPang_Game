@@ -44,7 +44,7 @@ public class SpawnObstacle : MonoBehaviour
 
         if (newObstacle == true)
         {
-            if (obstacleIndex == 0)         //0 index-> ground obstacle
+            if (obstacleIndex <= 1)         //0 index-> ground obstacle
             {
                 spawnPos.y = -3.6f;
             }
