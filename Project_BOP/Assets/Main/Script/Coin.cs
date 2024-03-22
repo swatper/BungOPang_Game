@@ -17,6 +17,8 @@ public class Coin : MonoBehaviour
     public coinStates currentState;
     public SpriteRenderer coinSpriteRenderer;
     public Sprite[] coinSprite;
+    public float speed;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -24,8 +26,13 @@ public class Coin : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
+        if (transform.position.x < -10f)
+        {
+            Destroy(gameObject);
+        }
         ChangeCoinSprite();
     }
 
@@ -106,5 +113,8 @@ public class Coin : MonoBehaviour
                 break;
         }
     }
-
+    public void SetSpeed(float speed)
+    {
+        this.speed = speed;
+    }
 }

@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
-  playSpeed: 4
+  playSpeed: 3.5
   isGameOver: 0
 --- !u!212 &33801958
 SpriteRenderer:
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
-  playSpeed: 4
+  playSpeed: 3.5
   isGameOver: 0
 --- !u!212 &244663694
 SpriteRenderer:
@@ -904,7 +904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
-  playSpeed: 2
+  playSpeed: 2.5
   isGameOver: 0
 --- !u!212 &507174438
 SpriteRenderer:
@@ -1007,7 +1007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
-  playSpeed: 4
+  playSpeed: 3.5
   isGameOver: 0
 --- !u!212 &519741995
 SpriteRenderer:
@@ -1786,6 +1786,52 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 82e70c4a2967fc647bf090bd49a0284b, type: 3}
   playSpeed: 1.5
   isGameOver: 0
+--- !u!1 &789072324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 789072326}
+  - component: {fileID: 789072325}
+  m_Layer: 0
+  m_Name: CoinSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &789072325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789072324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1037509e57a91e24b9c5bd6678e2318d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 993436916756520489, guid: fe1018fc31eddd34da414f7a5cac013d, type: 3}
+  coinSpeed: 10
+--- !u!4 &789072326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789072324}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &829083497
 GameObject:
   m_ObjectHideFlags: 0
@@ -3030,7 +3076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
-  playSpeed: 2
+  playSpeed: 2.5
   isGameOver: 0
 --- !u!212 &1040338833
 SpriteRenderer:
@@ -6607,3 +6653,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 937164789}
   - {fileID: 177944957}
+  - {fileID: 789072326}

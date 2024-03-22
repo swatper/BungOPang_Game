@@ -14,8 +14,28 @@ public  class CoinSpawner : MonoBehaviour
     private float spawnPosY;
     private int oldCoin;
     private int currentCoin=0;
-    private float levelUpTiming = 5;
+    private float levelUpTiming = 16f;
     private float levelUpTimingDelta = 0;
+    public float coinSpeed = 10f;
+    private float seasonChangeTime = 11f;   //Time to chage Season
+
+
+    void Start()
+    {
+        InvokeRepeating("SpawnCoin", 3f, 0.7f);
+    }
+    private void SpawnCoin()
+    {
+        spawnPosX = Random.Range(10, 11);
+        spawnPosY = Random.Range(-3f, 4);
+
+        GameObject newCoin = Instantiate(coinPrefab, new Vector3(spawnPosX, spawnPosY, 0f), Quaternion.identity);
+        newCoin.transform.parent = transform;
+
+        newCoin.GetComponent<Coin>().SetSpeed(coinSpeed);
+
+        newCoinslist.Add(newCoin);
+    }
     private void Awake()
     {
         if (coinSpawner == null)
@@ -30,27 +50,27 @@ public  class CoinSpawner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             SpawnCoin();
         }
         if (Input.GetMouseButtonDown(1))
         {
             RainbowCoin();
-        }
+        }*/
+
         UpdateCoin();
         levelingCoin();
-    }
-
-    private void SpawnCoin()
-    {
-        spawnPosX = Random.Range(0, 10);
-        spawnPosY = Random.Range(0, 10);
-
-        GameObject newCoin = Instantiate(coinPrefab, new Vector3(spawnPosX, spawnPosY, 0f), Quaternion.identity);
-        newCoinslist.Add(newCoin);
+        //Decrease time
+        seasonChangeTime -= Time.deltaTime;
+        //SeasonChage and increase speed
+        if (seasonChangeTime < 0f)
+        {
+            seasonChangeTime = 11f;
+            coinSpeed += 0.7f;
+        }
     }
 
     public void RainbowCoin()
@@ -83,6 +103,7 @@ public  class CoinSpawner : MonoBehaviour
             if (newCoinslist[i] != null) // 코인이 null이 아닌 경우에만 변경
             {
                 newCoinslist[i].GetComponent<Coin>().ChangeCoin(currentCoin); // 코인의 상태 변경
+                newCoinslist[i].GetComponent<Coin>().SetSpeed(coinSpeed);
             }
             else
             {
@@ -92,7 +113,7 @@ public  class CoinSpawner : MonoBehaviour
     }
     private void levelingCoin()
     {
-        levelUpTimingDelta += Time.deltaTime;
+        levelUpTimingDelta += Time.fixedDeltaTime;
         if (levelUpTimingDelta >= levelUpTiming)
         {
             if (currentCoin < 3)
