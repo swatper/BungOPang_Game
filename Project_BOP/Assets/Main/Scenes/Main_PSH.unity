@@ -231,6 +231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 177944957}
+  - component: {fileID: 177944958}
   m_Layer: 0
   m_Name: BackGroud
   m_TagString: Untagged
@@ -262,6 +263,19 @@ Transform:
   - {fileID: 1345811500}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &177944958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177944956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2617f64da648b274daf96433485877f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGameOver: 0
 --- !u!1 &244663691
 GameObject:
   m_ObjectHideFlags: 0
@@ -4170,6 +4184,7 @@ MonoBehaviour:
   - {fileID: 688943070405836470, guid: 188bc8b8f5da2364b902bcc85ac00cf0, type: 3}
   - {fileID: 5944093894727543769, guid: 522513fe667e15b4685571fd38dbfeff, type: 3}
   obstacleSpeed: 10
+  isGameOver: 0
 --- !u!1 &1360157327
 GameObject:
   m_ObjectHideFlags: 0

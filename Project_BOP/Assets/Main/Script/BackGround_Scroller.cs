@@ -8,9 +8,10 @@ public class BackGround_Scroller : MonoBehaviour
     public SpriteRenderer oldObjectSprite;   //Object's Old Sprite
     public Sprite[] newObjextSprite01;       //Object's New Sprite Array
     public float playSpeed;                 //Speed of Ground
+    public bool isGameOver = false;        //Check GamePlay Status
     private int spriteIndex = 1;            //Sprite Array's index
     private float seasonChangeTime = 11f;   //Time to chage Season
-    public bool isGameOver = false;        //Check GamePlay Status
+    private GameObject playerObject;        //PlayerObject to check player's status
 
     void Start()
     {
@@ -63,5 +64,9 @@ public class BackGround_Scroller : MonoBehaviour
             spriteIndex = 0;
         }
         return;
+    }
+    public void SetGameStatus(bool GameStatus)
+    {
+        this.isGameOver = GameStatus;
     }
 }

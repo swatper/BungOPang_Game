@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class MoveObstacle : MonoBehaviour
 {
-    //int destroyObs = 0;
     public float speed;
     public float bound = -20f;
+    public bool isGameover = false;
+    private GameObject playerObject;        //PlayerObject to check player's status
 
     void FixedUpdate()
     {
@@ -19,8 +20,5 @@ public class MoveObstacle : MonoBehaviour
     }
     public void SetSpeed(float speed) { 
         this.speed = speed;
-    }
-    public void DestroyObstacle() {
-        Destroy(gameObject);
     }
 }
