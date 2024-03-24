@@ -17,9 +17,12 @@ public class Coin : MonoBehaviour
     public coinStates currentState;
     public SpriteRenderer coinSpriteRenderer;
     public Sprite[] coinSprite;
+    public AudioSource coinSound;
+    
     // Start is called before the first frame update
     void Awake()
     {
+        coinSound = GetComponent<AudioSource>();
         ChangeCoinSprite();
     }
 
@@ -33,6 +36,8 @@ public class Coin : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            
+            coinSound.Play();
             AddCoin();
         }
     }
@@ -78,6 +83,7 @@ public class Coin : MonoBehaviour
                 break;
         }
         Destroy(gameObject);
+        
     }
 
     public void ChangeCoin(int newCoinNumber)

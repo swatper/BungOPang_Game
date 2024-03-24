@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
 
     private void Die() // Function that runs when a player dies
     {
+        playerAudio.Play();
         playerRigidbody.velocity = Vector2.zero;
         isDead = true;
         playerRigidbody.AddForce(new Vector2(0, 1250));
