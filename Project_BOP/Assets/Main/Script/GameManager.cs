@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     private int totalCoin = 0;
     private int highScore = 0;
     private int oldCoin;
+    public bool shieldON = false;
+    public bool flexON=false;
     private void Awake()
     {
         if (Instance == null)

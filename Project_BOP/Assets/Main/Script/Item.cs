@@ -2,18 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Item : MonoBehaviour
-{
-    // Start is called before the first frame update
+{   
+    public float speed;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (GameManager.Instance.isGameOver)
+        {
+            return;
+        }
+        transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
+        if (transform.position.x < -10f)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,5 +30,9 @@ public class Item : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    public void SetSpeed(float speed)
+    {
+        this.speed = speed;
     }
 }
