@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 
@@ -94,5 +95,11 @@ public class GameManager : MonoBehaviour
         }
         totalCoin += newCoin;
         totalCoinText.text = ("Total coin: " + totalCoin).ToString();
+    }
+
+    public void OnClickButton()
+    {
+        Debug.Log("ddddddd");
+        SceneManager.LoadScene("LobbyScene");
     }
 }

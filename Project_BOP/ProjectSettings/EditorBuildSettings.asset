@@ -5,14 +5,20 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Main/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 0
     path: Assets/Main/Scenes/MainScene_KGB_2.unity
     guid: 4154f56b476852443b91809dee37103f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Main/Scenes/Lobby_KGB.unity
     guid: f65e3db792bb6e34a83d7d5e024ec7ca
+  - enabled: 1
+    path: Assets/Main/Scenes/LobbyScene.unity
+    guid: 867d307174a7af249a61943a271f77b8
+  - enabled: 1
+    path: Assets/Main/Scenes/V2_Main_Scenes.unity
+    guid: 14e5654b054a80a4aac44ce7701dbfd9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

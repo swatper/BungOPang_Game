@@ -14,7 +14,7 @@ public class SpawnObstacle : MonoBehaviour
     {
         // Invoke the spawnObstacle function 
         //Call spwanObstacle After 3 seconds later and Repeat Time.deltaTime * 55.0f
-        InvokeRepeating("spawnObstacle", 3f, Time.deltaTime * 55.0f);
+        InvokeRepeating("spawnObstacle", 3f, Time.fixedDeltaTime * 45.0f);
     }
 
     private void FixedUpdate()

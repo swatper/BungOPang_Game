@@ -76,7 +76,7 @@ public class ClickButton : MonoBehaviour
 
                 ///////fadeOut();
 
-                float loadDelay = 10f;
+                float loadDelay = 0.5f;
                 Invoke("LoadScene", loadDelay);
 
                 break;
@@ -105,7 +105,7 @@ public class ClickButton : MonoBehaviour
 
     void LoadScene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("V2_Main_Scenes");
     }
 
 

@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    private float upwardForce = 0.8f;
+    private float upwardForce = 2f;
     private bool isDead = false;
     private bool shieldOn = false;
     private Rigidbody2D playerRigidbody; // Rigidbody2D to use
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (isDead) // stop function if player is dead.
         {

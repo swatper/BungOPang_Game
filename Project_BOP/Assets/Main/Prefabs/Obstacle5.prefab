@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4851017923359958636}
   m_Layer: 0
   m_Name: Obstacle5
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   bound: -10
-  isGameover: 0
 --- !u!60 &4851017923359958636
 PolygonCollider2D:
   m_ObjectHideFlags: 0
