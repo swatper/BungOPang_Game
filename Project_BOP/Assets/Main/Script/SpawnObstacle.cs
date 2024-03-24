@@ -33,6 +33,11 @@ public class SpawnObstacle : MonoBehaviour
     }
     void spawnObstacle()
     {
+        //Not to spawn obstacle
+        if (seasonChangeTime < 0.8f || seasonChangeTime > 9.5f)
+        {
+            return;
+        }
         float x = transform.position.x + Random.Range(13, 16);
         float y = Random.Range(-3f, 4f);
         float z = transform.position.z;
