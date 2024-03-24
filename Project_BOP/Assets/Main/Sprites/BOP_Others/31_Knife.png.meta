@@ -1,0 +1,489 @@
+fileFormatVersion: 2
+guid: 6eeab3c209d8fd6419d71cf037e59a40
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6920323298976010969
+    second: 31_Knife_0
+  - first:
+      213: 5145102484075128311
+    second: 31_Knife_1
+  - first:
+      213: -1407584625086136480
+    second: 31_Knife_2
+  - first:
+      213: -7211538999377540146
+    second: 31_Knife_3
+  - first:
+      213: -4591401487804706103
+    second: 31_Knife_4
+  - first:
+      213: -3593559268628174905
+    second: 31_Knife_5
+  - first:
+      213: -4226871603654918862
+    second: 31_Knife_6
+  - first:
+      213: 2551268450503429409
+    second: 31_Knife_7
+  - first:
+      213: -1448887702223362058
+    second: 31_Knife_8
+  - first:
+      213: 8004409600235923149
+    second: 31_Knife_9
+  - first:
+      213: -3972373593533751713
+    second: 31_Knife_10
+  - first:
+      213: 4954458768461771154
+    second: 31_Knife_11
+  - first:
+      213: -546498533604694444
+    second: 31_Knife_12
+  - first:
+      213: -8016622741603789173
+    second: 31_Knife_13
+  - first:
+      213: 2957603953274648057
+    second: 31_Knife_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 31_Knife_0
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 26
+        width: 482
+        height: 815
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2135eff5de90060800000000000000
+      internalID: 6920323298976010969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_1
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 689
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f527480373176740800000000000000
+      internalID: 5145102484075128311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_2
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 673
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f707ebd31477ce0800000000000000
+      internalID: -1407584625086136480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_3
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 661
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecbc93a0d777beb90800000000000000
+      internalID: -7211538999377540146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_4
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 565
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c253325ca01840c0800000000000000
+      internalID: -4591401487804706103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_5
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 529
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c7ea1a72ec112ec0800000000000000
+      internalID: -3593559268628174905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_6
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 504
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23d76f0eba22755c0800000000000000
+      internalID: -4226871603654918862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_7
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 446
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12d0be6732de76320800000000000000
+      internalID: 2551268450503429409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_8
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 437
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f76b85bf4484ebe0800000000000000
+      internalID: -1448887702223362058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_9
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 436
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6e9ca4f10651f60800000000000000
+      internalID: 8004409600235923149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_10
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 285
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e5742634b4fd8c0800000000000000
+      internalID: -3972373593533751713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_11
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 264
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 291bb740006c1c440800000000000000
+      internalID: 4954458768461771154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_12
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 241
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 456683aaa727a68f0800000000000000
+      internalID: -546498533604694444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_13
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 214
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b865364271c3fb090800000000000000
+      internalID: -8016622741603789173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 31_Knife_14
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 25
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f5f93d10258b0920800000000000000
+      internalID: 2957603953274648057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 42c43be47f44be240a01c4d27982a753
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      31_Knife_0: 6920323298976010969
+      31_Knife_1: 5145102484075128311
+      31_Knife_10: -3972373593533751713
+      31_Knife_11: 4954458768461771154
+      31_Knife_12: -546498533604694444
+      31_Knife_13: -8016622741603789173
+      31_Knife_14: 2957603953274648057
+      31_Knife_2: -1407584625086136480
+      31_Knife_3: -7211538999377540146
+      31_Knife_4: -4591401487804706103
+      31_Knife_5: -3593559268628174905
+      31_Knife_6: -4226871603654918862
+      31_Knife_7: 2551268450503429409
+      31_Knife_8: -1448887702223362058
+      31_Knife_9: 8004409600235923149
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
