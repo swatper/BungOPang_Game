@@ -167,7 +167,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 4
-  isGameOver: 0
 --- !u!212 &33801958
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -324,7 +323,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 4
-  isGameOver: 0
 --- !u!212 &244663694
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -485,7 +483,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fd090bc2c85a99149b27e01c9b675b8e, type: 3}
   - {fileID: 21300000, guid: 6ff57d9caad8fed43ae5efef10d11fc1, type: 3}
   playSpeed: 4
-  isGameOver: 0
 --- !u!1 &303962986
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +535,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2f3d48af88127f244a5393fcf8eabc64, type: 3}
   - {fileID: 21300000, guid: 0d180ef1c4ab1014987e2de16a31b835, type: 3}
   playSpeed: 2
-  isGameOver: 0
 --- !u!212 &303962989
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -641,7 +637,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 4
-  isGameOver: 0
 --- !u!212 &305257100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -905,7 +900,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 2
-  isGameOver: 0
 --- !u!212 &507174438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1008,7 +1002,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 4
-  isGameOver: 0
 --- !u!212 &519741995
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1444,7 +1437,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 10
-  isGameOver: 0
 --- !u!1 &586657083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,7 +1616,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3db354165a4809e4fbdab2816db81297, type: 3}
   - {fileID: 21300000, guid: 81720abf9497de840a457ce9a9d82e2f, type: 3}
   playSpeed: 10
-  isGameOver: 0
 --- !u!212 &629375266
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1785,7 +1776,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 24991558d8202c54fb61637f82c1dfe0, type: 3}
   - {fileID: 21300000, guid: 82e70c4a2967fc647bf090bd49a0284b, type: 3}
   playSpeed: 1.5
-  isGameOver: 0
 --- !u!1 &829083497
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,7 +2157,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 10
-  isGameOver: 0
 --- !u!1 &876726206
 GameObject:
   m_ObjectHideFlags: 0
@@ -2511,7 +2500,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 10
-  isGameOver: 0
 --- !u!19719996 &876726211
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -2656,7 +2644,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fd090bc2c85a99149b27e01c9b675b8e, type: 3}
   - {fileID: 21300000, guid: 6ff57d9caad8fed43ae5efef10d11fc1, type: 3}
   playSpeed: 4
-  isGameOver: 0
 --- !u!1 &926627105
 GameObject:
   m_ObjectHideFlags: 0
@@ -2928,7 +2915,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 3
-  isGameOver: 0
 --- !u!212 &1039039585
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3031,7 +3017,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 2
-  isGameOver: 0
 --- !u!212 &1040338833
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3138,7 +3123,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2f3d48af88127f244a5393fcf8eabc64, type: 3}
   - {fileID: 21300000, guid: 0d180ef1c4ab1014987e2de16a31b835, type: 3}
   playSpeed: 2
-  isGameOver: 0
 --- !u!212 &1085447699
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3245,7 +3229,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b94b23723dfa2e84e9de0fdeb406695d, type: 3}
   - {fileID: 21300000, guid: 8a7ba5aef11a68649bbb98fbf6dda0ff, type: 3}
   playSpeed: 10
-  isGameOver: 0
 --- !u!212 &1110786441
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3348,7 +3331,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 3
-  isGameOver: 0
 --- !u!212 &1129745204
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3609,7 +3591,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 24991558d8202c54fb61637f82c1dfe0, type: 3}
   - {fileID: 21300000, guid: 82e70c4a2967fc647bf090bd49a0284b, type: 3}
   playSpeed: 1.5
-  isGameOver: 0
 --- !u!1 &1166064962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3993,7 +3974,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 10
-  isGameOver: 0
 --- !u!1 &1189478697
 GameObject:
   m_ObjectHideFlags: 0
@@ -4079,7 +4059,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3db354165a4809e4fbdab2816db81297, type: 3}
   - {fileID: 21300000, guid: 81720abf9497de840a457ce9a9d82e2f, type: 3}
   playSpeed: 10
-  isGameOver: 0
 --- !u!212 &1299824818
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4365,7 +4344,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 4
-  isGameOver: 0
 --- !u!212 &1474128908
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4554,7 +4532,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 4
-  isGameOver: 0
 --- !u!212 &1555011302
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4990,7 +4967,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 10
-  isGameOver: 0
 --- !u!1 &1727596545
 GameObject:
   m_ObjectHideFlags: 0
@@ -5041,7 +5017,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 10
-  isGameOver: 0
 --- !u!19719996 &1727596548
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -5584,7 +5559,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 10
-  isGameOver: 0
 --- !u!483693784 &1932757589
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -5968,7 +5942,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b94b23723dfa2e84e9de0fdeb406695d, type: 3}
   - {fileID: 21300000, guid: 8a7ba5aef11a68649bbb98fbf6dda0ff, type: 3}
   playSpeed: 10
-  isGameOver: 0
 --- !u!212 &1989888523
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6075,7 +6048,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b94b23723dfa2e84e9de0fdeb406695d, type: 3}
   - {fileID: 21300000, guid: 8a7ba5aef11a68649bbb98fbf6dda0ff, type: 3}
   playSpeed: 10
-  isGameOver: 0
 --- !u!212 &2006013192
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6214,7 +6186,6 @@ MonoBehaviour:
   waveSpeed: 0
   upSpeed: 0.7
   ChangeTimes: 0
-  isGameOver: 0
   changeEffect: {fileID: 2109851511}
 --- !u!1 &2144190964
 GameObject:
@@ -6599,7 +6570,6 @@ MonoBehaviour:
   oldObjectSprite: {fileID: 0}
   newObjextSprite01: []
   playSpeed: 10
-  isGameOver: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

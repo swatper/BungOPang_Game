@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public bool isGameOver = false;
+    public bool isGameOver = true;
     public TMP_Text scoreText;
     public TMP_Text highScoreText;
     public TMP_Text CoinText;
@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
     public int newCoin = 0;
     private int totalCoin = 0;
     private int highScore = 0;
-    private int oldCoin;
     public bool shieldON = false;
     public bool flexON=false;
     private void Awake()
@@ -41,15 +40,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+        isGameOver = true;
     }
-    private void OnEnable()
-    {
-        isGameOver = false;
-    }
-    void Start()
-    {
-        isGameOver = false;
-    }
+
 
     void FixedUpdate()
     {

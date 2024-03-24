@@ -31,7 +31,11 @@ public class PlayerController : MonoBehaviour
             return;
         }
         PlayerRotate();
-        
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            
+        }
         // Press Space to fly)
         if (Input.GetKey(KeyCode.Space)) 
         {

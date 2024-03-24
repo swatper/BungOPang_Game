@@ -105,9 +105,10 @@ public class ClickButton : MonoBehaviour
 
     void LoadScene()
     {
-        GameManager.Instance.isGameOver = false;
-        GameManager.Instance.ActiveText();
         SceneManager.LoadScene("V2_Main_Scenes");
+        GameManager.Instance.ActiveText();
+        GameManager.Instance.isGameOver = false;
+
     }
 
 
