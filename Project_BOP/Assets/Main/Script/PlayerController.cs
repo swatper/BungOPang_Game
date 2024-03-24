@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
 {
 
     private float upwardForce = 2f;
-    private bool isDead = false;
     private bool shieldOn = false;
     private Rigidbody2D playerRigidbody; // Rigidbody2D to use
     private AudioSource playerAudio; // Audio component to use
@@ -27,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isDead) // stop function if player is dead.
+        if (GameManager.Instance.isGameOver) // stop function if player is dead.
         {
             return;
         }
@@ -68,8 +67,11 @@ public class PlayerController : MonoBehaviour
 
     private void Die() // Function that runs when a player dies
     {
+        if (GameManager.Instance.isGameOver) // stop function if player is dead.
+        {
+            return;
+        }
         playerRigidbody.velocity = Vector2.zero;
-        isDead = true;
         playerRigidbody.AddForce(new Vector2(0, 1250));
         playerAnimator.SetTrigger("Die"); //Play Die animation by setting the animator trigger to "Die"
         GameManager.Instance.OnPlayerDead(); //Run the "OnPlayerDead()" function in GameManager
@@ -79,16 +81,20 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) //
     {
-        if (collision.tag == "Shield" && !isDead)
+        if (GameManager.Instance.isGameOver) // stop function if player is dead.
+        {
+            return;
+        }
+        if (collision.tag == "Shield")
         {
             shieldOn = true;
             playerSpriteRenderer.sprite = playerSprite[1];
         }
-        if (collision.tag == "Flex" && !isDead)
+        if (collision.tag == "Flex")
         {
             CoinSpawner.coinSpawner.RainbowCoin();
         }
-        if (collision.tag == "Obstacle" && !isDead)
+        if (collision.tag == "Obstacle")
         {
             if (shieldOn)
             {

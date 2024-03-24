@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text gameoverCoinText;
     public TMP_Text gameoverScoreText;
     public GameObject gameoverUI;
-
+    public GameObject TextUI;
     public float score = 0;
     public int newCoin = 0;
     private int totalCoin = 0;
@@ -42,10 +42,13 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
-
+    private void OnEnable()
+    {
+        isGameOver = false;
+    }
     void Start()
     {
-        
+        isGameOver = false;
     }
 
     void FixedUpdate()
@@ -61,7 +64,6 @@ public class GameManager : MonoBehaviour
     {
         if (!isGameOver)
         {
-            
             score += (Time.deltaTime * 12);
             scoreText.text = ("Score: "+(int)score).ToString();
         }
@@ -99,7 +101,16 @@ public class GameManager : MonoBehaviour
 
     public void OnClickButton()
     {
-        Debug.Log("ddddddd");
         SceneManager.LoadScene("LobbyScene");
+        InactiveText();
+    }
+    private void InactiveText()
+    {
+        TextUI.SetActive(false);
+        gameoverUI.SetActive(false);
+    }
+    public void ActiveText()
+    {
+        TextUI.SetActive(true);
     }
 }
