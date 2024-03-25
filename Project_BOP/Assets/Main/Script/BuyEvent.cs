@@ -6,6 +6,13 @@ using UnityEngine.UI;
 
 public class BuyEvent : MonoBehaviour
 {
+    Text useText;
+
+    void LateUpdate()
+    {
+        useText = GetComponent<Text>();
+    }
+
     public void OnClickBuy(string objectName)
     {
         switch (objectName)
@@ -21,6 +28,7 @@ public class BuyEvent : MonoBehaviour
 
             // Collection
             case "???(1)":
+
 
                 break;
 

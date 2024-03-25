@@ -13,8 +13,10 @@ public class ClickButton : MonoBehaviour
     // Define Panel
     public GameObject GameStartPanel;
     public GameObject StorePanel;
-    public GameObject ClosePanel;
     public GameObject CollectionPanel;
+    public GameObject CreditScroll;
+    public GameObject HowToPlayPanel;
+    public GameObject ClosePanel;
 
     public Toggle UseShield;
     public Toggle UseFlex;
@@ -27,8 +29,10 @@ public class ClickButton : MonoBehaviour
     {
         GameStartPanel.SetActive(false);
         StorePanel.SetActive(false);
-        ClosePanel.SetActive(false);
         CollectionPanel.SetActive(false);
+        CreditScroll.SetActive(false);
+        HowToPlayPanel.SetActive(false);
+        ClosePanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -45,8 +49,6 @@ public class ClickButton : MonoBehaviour
             case "GameStart":
                 GameStartPanel.SetActive(true);
                 ClosePanel.SetActive(true );
-
-
                 break;
 
             case "Store":
@@ -59,7 +61,9 @@ public class ClickButton : MonoBehaviour
                 ClosePanel.SetActive(true);
                 break;
 
-            case "Setting":
+            case "Credit":
+                CreditScroll.SetActive(true);
+                ClosePanel.SetActive(true);
                 break;
 
             case "Play":
@@ -81,27 +85,20 @@ public class ClickButton : MonoBehaviour
 
                 break;
 
-            case "Buy":
-                
-                ///////
+            case "HowToPlay":
+                HowToPlayPanel.SetActive(true);
+                ClosePanel.SetActive(true);
+                GameStartPanel.SetActive(false);
+                StorePanel.SetActive(false);
+                CollectionPanel.SetActive(false);
+                CreditScroll.SetActive(false);
                 break;
 
 
         }
     }
 
-    //void fadeOut()
-    //{
-    //    Color color = Black.color;
-
-    //    if (color.a < 1)
-    //    {
-    //        color.a += Time.deltaTime * 3;
-    //        Black.color = color;
-
-    //    }
-
-    //}
+    
 
     void LoadScene()
     {
@@ -119,11 +116,11 @@ public class ClickButton : MonoBehaviour
         //bool GameStartState = GameStartPanel.activeSelf;
         //bool StoreState = StorePanel.activeSelf;
 
-        
-
         GameStartPanel.SetActive(false);
         StorePanel.SetActive(false);
         CollectionPanel.SetActive(false);
+        CreditScroll.SetActive(false);
+        HowToPlayPanel.SetActive(false);
         ClosePanel.SetActive(false);
 
     }
