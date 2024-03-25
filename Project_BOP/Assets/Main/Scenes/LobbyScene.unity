@@ -5555,7 +5555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &884731375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7979,8 +7979,8 @@ MonoBehaviour:
   type: 2
   BestScore: 10000
   Coin: 10000
-  ShieldItem: 10
-  FlexItem: 10
+  ShieldItem: 0
+  FlexItem: 0
 --- !u!114 &1155528404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15292,7 +15292,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1804334109}
+  - {fileID: 838123729}
   - {fileID: 621268416}
   - {fileID: 362948}
   - {fileID: 1638858990}
-  - {fileID: 838123729}

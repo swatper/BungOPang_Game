@@ -20,10 +20,12 @@ public class BuyEvent : MonoBehaviour
             // Store
             case "shield":
                 Debug.Log("+1 Shield");
+                GameManager.Instance.UseMoney(100);
+
                 break;
 
             case "flex":
-                
+                GameManager.Instance.UseMoney(100);
                 break;
 
             // Collection

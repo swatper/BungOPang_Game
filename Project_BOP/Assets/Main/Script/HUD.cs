@@ -6,17 +6,14 @@ using UnityEngine.UI;
 public class HUD : MonoBehaviour
 {
    public enum InfoType { BestScore, Coin, ShieldItem, FlexItem }
-    public InfoType type;
+   public InfoType type;
+
 
     //change after murge
-    public int BestScore = 10000;
-    public int Coin = 10000;
-    public int ShieldItem = 10;
-    public int FlexItem = 10;
-
-    
-
-
+    public int BestScore = 0;
+    public int Coin = 0;
+    public int ShieldItem = 0;
+    public int FlexItem = 0;
 
     Text myText;
 
@@ -25,7 +22,7 @@ public class HUD : MonoBehaviour
         myText = GetComponent<Text>();
     }
 
-    void LateUpdate()
+    void Update()
     {
         switch (type)
         {
@@ -41,16 +38,17 @@ public class HUD : MonoBehaviour
 
             case InfoType.ShieldItem:
                 //myText.text = "ShieldItem: " + GameManager.instance.GetShieldItem();
-                myText.text = "99";
+                myText.text = ShieldItem.ToString();
                 break;
 
             case InfoType.FlexItem:
                 //myText.text = "FlexItem: " + GameManager.instance.GetFlexItem();
-                myText.text = "99";
+                myText.text = FlexItem.ToString();
                 break;
 
             
-        }   
-
+        }
+        BestScore = GameManager.Instance.GetHighscore();
+        Coin = GameManager.Instance.GetTotalCoin();
     }
 }

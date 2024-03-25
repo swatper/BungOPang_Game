@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public GameObject TextUI;
     public float score = 0;
     public int newCoin = 0;
-    private int totalCoin = 0;
+    private int totalCoin = 99999;
     private int highScore = 0;
     public bool shieldON = false;
     public bool flexON=false;
@@ -115,5 +115,17 @@ public class GameManager : MonoBehaviour
         newCoin = 0;
         totalCoinText.text = ("Total coin: " + totalCoin).ToString();
         CoinText.text=("Plus coin: " + newCoin).ToString();
+    }
+
+    public int GetTotalCoin()
+    {
+        return totalCoin;
+    }
+    public int GetHighscore()
+    {
+        return highScore;
+    }
+    public void UseMoney(int price) { 
+        totalCoin -= price;
     }
 }
