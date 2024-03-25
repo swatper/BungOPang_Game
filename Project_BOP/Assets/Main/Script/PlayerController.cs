@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnimator;
     private SpriteRenderer playerSpriteRenderer;
     public Sprite[] playerSprite;
+    private bool invisible = false;
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -100,15 +101,20 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.tag == "Obstacle")
         {
-            if (shieldOn)
+            if (!invisible)
             {
-                playerSpriteRenderer.color = new Color(1, 1, 1, 0.4f);
-                playerSpriteRenderer.sprite = playerSprite[0];
-                Invoke("ShieldOff", 2);
-            }
-            else
-            {
-                Die();
+                if (shieldOn)
+                {
+                    invisible = true;
+                    playerSpriteRenderer.color = new Color(1, 1, 1, 0.4f);
+                    playerSpriteRenderer.sprite = playerSprite[0];
+                    shieldOn =false;
+                    Invoke("ShieldOff", 2);
+                }
+                else
+                {
+                    Die();
+                }
             }
         }
     }
@@ -116,7 +122,7 @@ public class PlayerController : MonoBehaviour
     private void ShieldOff()
     {
         playerSpriteRenderer.color = new Color(1, 1, 1, 1f);
-        shieldOn = false;
+        invisible = false;
     }
 
 
