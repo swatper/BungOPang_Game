@@ -6,7 +6,6 @@ public class MoveObstacle : MonoBehaviour
 {
     public float speed;
     public float bound = -20f;
-    private GameObject playerObject;        //PlayerObject to check player's status
 
     void FixedUpdate()
     {
