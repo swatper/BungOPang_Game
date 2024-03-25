@@ -67,7 +67,6 @@ public class ClickButton : MonoBehaviour
                 break;
 
             case "Play":
-
                 if (UseShield != null && UseShield.isOn)
                 {
                     ///////

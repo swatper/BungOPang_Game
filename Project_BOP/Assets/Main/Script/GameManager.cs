@@ -58,12 +58,12 @@ public class GameManager : MonoBehaviour
         if (!isGameOver)
         {
             score += (Time.deltaTime * 12);
-            scoreText.text = ("Score: "+(int)score).ToString();
+            scoreText.text = ("현재 점수 "+(int)score).ToString();
         }
         if (score > highScore)
         {
             highScore = (int)score;
-            highScoreText.text = ("High Score: " + highScore).ToString();
+            highScoreText.text = ("최고 점수 " + highScore).ToString();
         }
     }
     // 재화 증가 함수 정의
@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
         if (!isGameOver)
         {
             newCoin += addCoin;
-            CoinText.text = ("Plus coin: "+newCoin).ToString();
+            CoinText.text = ("얻은 팥 "+newCoin).ToString();
         }
 
     }
@@ -82,11 +82,11 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
         gameoverUI.SetActive(true);
         gameoverCoinText.text = ("+ : " + newCoin).ToString();
-        gameoverScoreText.text = ("Score: "+(int)score).ToString();
+        gameoverScoreText.text = ("현재 점수 "+(int)score).ToString();
         if (score > highScore)
         {
             highScore = (int)score;
-            highScoreText.text = ("High Score:"+ highScore).ToString();
+            highScoreText.text = ("최고 점수 "+ highScore).ToString();
         }
 
         
@@ -113,8 +113,8 @@ public class GameManager : MonoBehaviour
         score = 0;
         totalCoin += newCoin;
         newCoin = 0;
-        totalCoinText.text = ("Total coin: " + totalCoin).ToString();
-        CoinText.text=("Plus coin: " + newCoin).ToString();
+        totalCoinText.text = ("전체 팥 " + totalCoin).ToString();
+        CoinText.text=("얻은 팥 " + newCoin).ToString();
     }
 
     public int GetTotalCoin()
