@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     private int highScore = 0;
     public bool shieldON = false;
     public bool flexON=false;
-    private void Awake()
+    private void Start()
     {
         if (Instance == null)
         {
@@ -81,19 +81,20 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
         gameoverUI.SetActive(true);
-        gameoverCoinText.text = ("@: " + newCoin).ToString();
+        gameoverCoinText.text = ("+ : " + newCoin).ToString();
         gameoverScoreText.text = ("Score: "+(int)score).ToString();
         if (score > highScore)
         {
             highScore = (int)score;
             highScoreText.text = ("High Score:"+ highScore).ToString();
         }
-        totalCoin += newCoin;
-        totalCoinText.text = ("Total coin: " + totalCoin).ToString();
+
+        
     }
 
     public void OnClickButton()
     {
+        TotalCoin();
         SceneManager.LoadScene("LobbyScene");
         InactiveText();
     }
@@ -105,5 +106,14 @@ public class GameManager : MonoBehaviour
     public void ActiveText()
     {
         TextUI.SetActive(true);
+    }
+
+    public void TotalCoin()
+    {
+        score = 0;
+        totalCoin += newCoin;
+        newCoin = 0;
+        totalCoinText.text = ("Total coin: " + totalCoin).ToString();
+        CoinText.text=("Plus coin: " + newCoin).ToString();
     }
 }
