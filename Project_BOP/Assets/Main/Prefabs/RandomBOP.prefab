@@ -128,4 +128,5 @@ MonoBehaviour:
   - {fileID: -5622901713081898559, guid: fe4d0517abba5224ea44d2d3677ff298, type: 3}
   - {fileID: -796155573255488767, guid: 251b2a0871561054db8526bbbeed0c5b, type: 3}
   - {fileID: 5181654206020448988, guid: 27b9bfbb0465dc54e93e8e5b73d85a7d, type: 3}
+  - {fileID: -8038976213705442086, guid: 4e3364c7701a38a4bb63e83ce56b9b52, type: 3}
   bopRenderer: {fileID: 0}

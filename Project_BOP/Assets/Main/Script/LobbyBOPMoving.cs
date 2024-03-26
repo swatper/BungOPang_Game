@@ -14,7 +14,7 @@ public class LobbyBOPMoving : MonoBehaviour
 
         //Set BOP's position
         bopMovingSpeed = Random.Range(2, 10);
-        spriteIndex = Random.Range(0, 28);
+        spriteIndex = Random.Range(0, 29);
 
         //Select BOP's Sprite
         bopRenderer.sprite = bopSprites[spriteIndex];
