@@ -109,6 +109,13 @@ public class GameManager : MonoBehaviour
         LobbyUI.SetActive(true);
         InactiveText();
     }
+    public void OnClickReStartButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameoverUI.SetActive(false);
+        TotalCoin();
+        isGameOver = false;
+    }
     private void InactiveText()
     {
         TextUI.SetActive(false);
