@@ -5,10 +5,18 @@ using UnityEngine;
 public class BackgroundManager1 : MonoBehaviour
 {
     public GameObject bopPrefabs;//Bop Prefabs Array
-
+    public GameObject lobbyToMainEffect;
+    public bool isGameStart = false;
     void Start()
     {
         InvokeRepeating("SpawnBop", 0f, 0.7f);
+    }
+    private void FixedUpdate()
+    {
+        if (isGameStart) {
+            CallLobbyToMainEffect();
+            isGameStart = false;
+        }
     }
 
     //Spawn Background BOP
@@ -22,5 +30,8 @@ public class BackgroundManager1 : MonoBehaviour
         //Spawn Bop
         GameObject activeBop = Instantiate(bopPrefabs, pos, Quaternion.identity);
         activeBop.transform.parent = transform;
+    }
+    void CallLobbyToMainEffect() {
+        Instantiate(lobbyToMainEffect);
     }
 }
