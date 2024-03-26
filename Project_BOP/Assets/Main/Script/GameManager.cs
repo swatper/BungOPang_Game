@@ -88,8 +88,9 @@ public class GameManager : MonoBehaviour
             highScore = (int)score;
             highScoreText.text = ("최고 점수 "+ highScore).ToString();
         }
+        SoundManager.instance.SFXPlay("GameOver");
 
-        
+
     }
 
     public void OnClickButton()

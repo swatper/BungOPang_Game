@@ -97,13 +97,13 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.tag == "Shield")
         {
-            SoundManager.instance.SFXPlay("Shield", shield);
+            SoundManager.instance.SFXPlay("Shield");
             shieldOn = true;
             playerSpriteRenderer.sprite = playerSprite[1];
         }
         if (collision.tag == "Flex")
         {
-            SoundManager.instance.SFXPlay("Flex", flex);
+            SoundManager.instance.SFXPlay("Flex");
             CoinSpawner.coinSpawner.RainbowCoin();
         }
         if (collision.tag == "Obstacle")
@@ -112,6 +112,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (shieldOn)
                 {
+                    SoundManager.instance.SFXPlay("BRKShield");
                     invisible = true;
                     playerSpriteRenderer.color = new Color(1, 1, 1, 0.4f);
                     playerSpriteRenderer.sprite = playerSprite[0];
@@ -120,7 +121,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    SoundManager.instance.SFXPlay("Die", die);
+                    SoundManager.instance.SFXPlay("Slap");
                     Die();
                 }
             }

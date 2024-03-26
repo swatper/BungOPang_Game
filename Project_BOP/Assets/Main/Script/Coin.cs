@@ -72,7 +72,7 @@ public class Coin : MonoBehaviour
     }
     private void AddCoin()
     {
-        SoundManager.instance.SFXPlay("AddCoin", addCoin);
+        SoundManager.instance.SFXPlay("Blop");
 
         switch (currentState)
         {
