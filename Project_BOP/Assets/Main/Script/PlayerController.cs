@@ -9,16 +9,21 @@ public class PlayerController : MonoBehaviour
     private float upwardForce = 2f;
     private bool shieldOn = false;
     private Rigidbody2D playerRigidbody; // Rigidbody2D to use
-    private AudioSource playerAudio; // Audio component to use
+    // private AudioSource playerAudio; // Audio component to use
     private Transform playerTransform;
     private Animator playerAnimator;
     private SpriteRenderer playerSpriteRenderer;
     public Sprite[] playerSprite;
+
+    public AudioClip die;
+    public AudioClip shield;
+    public AudioClip flex;
+
     private bool invisible = false;
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
-        playerAudio = GetComponent<AudioSource>();
+        // playerAudio = GetComponent<AudioSource>();
         playerTransform = GetComponent<Transform>();
         playerAnimator = GetComponent<Animator>();
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
@@ -92,11 +97,13 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.tag == "Shield")
         {
+            SoundManager.instance.SFXPlay("Shield", shield);
             shieldOn = true;
             playerSpriteRenderer.sprite = playerSprite[1];
         }
         if (collision.tag == "Flex")
         {
+            SoundManager.instance.SFXPlay("Flex", flex);
             CoinSpawner.coinSpawner.RainbowCoin();
         }
         if (collision.tag == "Obstacle")
@@ -113,6 +120,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
+                    SoundManager.instance.SFXPlay("Die", die);
                     Die();
                 }
             }

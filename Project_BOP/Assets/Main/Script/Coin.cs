@@ -19,6 +19,9 @@ public class Coin : MonoBehaviour
     public Sprite[] coinSprite;
     public float speed;
 
+    public AudioClip addCoin;
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -39,7 +42,7 @@ public class Coin : MonoBehaviour
         ChangeCoinSprite();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
@@ -69,6 +72,8 @@ public class Coin : MonoBehaviour
     }
     private void AddCoin()
     {
+        SoundManager.instance.SFXPlay("AddCoin", addCoin);
+
         switch (currentState)
         {
             case coinStates.Nomal:
