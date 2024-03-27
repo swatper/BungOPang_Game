@@ -26,12 +26,12 @@ public class HUD : MonoBehaviour
         {
             case InfoType.BestScore:
                 //myText.text = "BestScore: " + GameManager.instance.GetScore();
-                myText.text = "Best Score: " + BestScore;
+                myText.text = "ÃÖ°í Á¡¼ö " + BestScore;
                 break;
 
             case InfoType.Coin:
                 //myText.text = "Coin: " + GameManager.instance.GetCoin();
-                myText.text = "Coin: " + Coin;
+                myText.text = "ÆÏ " + Coin;
                 break;
 
             case InfoType.ShieldItem:

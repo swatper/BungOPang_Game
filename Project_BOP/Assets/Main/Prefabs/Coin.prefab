@@ -146,3 +146,4 @@ MonoBehaviour:
   - {fileID: -8171958947958391838, guid: f5c0aefb3c766444ca4993e1edb7ce70, type: 3}
   - {fileID: -2272546963272870979, guid: f7833d9b84a972c4d86537cdc5650336, type: 3}
   speed: 0
+  addCoin: {fileID: 8300000, guid: 5a86d462f07d43c4aaacf5cd60900afd, type: 3}
