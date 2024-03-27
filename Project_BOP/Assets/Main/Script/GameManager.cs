@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("씬에 두개 이상의 게임 매니저가 존재합니다.");
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
@@ -108,6 +107,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("LobbyScene_KGB");
         LobbyUI.SetActive(true);
         InactiveText();
+        BackgroundManager1.Instance.SetSceneStatus(true);
     }
     public void OnClickReStartButton()
     {

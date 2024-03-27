@@ -23,7 +23,9 @@ public class LobbyBOPMoving : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        if (!BackgroundManager1.Instance.isLobbyScene) { 
+            Destroy(gameObject);
+        }
         transform.Translate(-Vector3.left * bopMovingSpeed * Time.deltaTime, Space.World);
         if (transform.position.x > 10f) { 
             Destroy(gameObject);    

@@ -18,13 +18,9 @@ public class ClickButton : MonoBehaviour
     public GameObject CreditScroll;
     public GameObject HowToPlayPanel;
     public GameObject ClosePanel;
-
+    
     public Toggle UseShield;
     public Toggle UseFlex;
-
-    // Define Item count
-    private int shieldItem = 3;
-    private int flexItem = 3;
 
     void Start()
     {
@@ -68,21 +64,11 @@ public class ClickButton : MonoBehaviour
                 break;
 
             case "Play":
-
-                if (UseShield != null && UseShield.isOn)
-                {
-                    ///////
-                }
-
-                if (UseFlex != null && UseFlex.isOn)
-                {
-                    ///////
-                }
-
+                BackgroundManager1.Instance.CallLobbyToMainEffect();
+                BackgroundManager1.Instance.SetSceneStatus(false);
+                GameStartPanel.SetActive(false);
                 ///////fadeOut();
-
-                float loadDelay = 0.5f;
-                Invoke("LoadScene", loadDelay);
+                Invoke("LoadScene",0f);
 
                 break;
 
@@ -94,8 +80,6 @@ public class ClickButton : MonoBehaviour
                 CollectionPanel.SetActive(false);
                 CreditScroll.SetActive(false);
                 break;
-
-
         }
     }
 
@@ -126,8 +110,5 @@ public class ClickButton : MonoBehaviour
         ClosePanel.SetActive(false);
 
     }
-
-
-
 
 }
