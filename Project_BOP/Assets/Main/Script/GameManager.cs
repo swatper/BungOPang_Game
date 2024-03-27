@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
     public bool flexON = false;
     private int shieldItem = 0;
     private int flexItem = 0;
-    public Toggle shieldToggle; // Shield Åä±Û
-    public Toggle flexToggle; // Flex Åä±Û
+    public Toggle shieldToggle; // Shield ï¿½ï¿½ï¿½
+    public Toggle flexToggle; // Flex ï¿½ï¿½ï¿½
 
     private void Start()
     {
@@ -60,44 +60,46 @@ public class GameManager : MonoBehaviour
         }
         AddScore(); // 
     }
-    // Á¡¼ö Áõ°¡ ÇÔ¼ö Á¤ÀÇ
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void AddScore()
     {
         if (!isGameOver)
         {
             score += (Time.deltaTime * 12);
-            scoreText.text = ("Score: " + (int)score).ToString();
+            scoreText.text = ("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ "+(int)score).ToString();
         }
         if (score > highScore)
         {
             highScore = (int)score;
-            highScoreText.text = ("High Score: " + highScore).ToString();
+            highScoreText.text = ("ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ " + highScore).ToString();
         }
     }
-    // ÀçÈ­ Áõ°¡ ÇÔ¼ö Á¤ÀÇ
+    // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void AddCoin(int addCoin)
     {
         if (!isGameOver)
         {
             newCoin += addCoin;
-            CoinText.text = ("Plus coin: " + newCoin).ToString();
+
+            CoinText.text = ("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ "+newCoin).ToString();
         }
 
     }
-    // ÇÃ·¹ÀÌ¾î »ç¸Á ÇÔ¼ö Á¤ÀÇ(°ÔÀÓ¿À¹ö)
+    // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½Ó¿ï¿½ï¿½ï¿½)
     public void OnPlayerDead()
     {
         UseItme();
         isGameOver = true;
         gameoverUI.SetActive(true);
         gameoverCoinText.text = ("+ : " + newCoin).ToString();
-        gameoverScoreText.text = ("Score: " + (int)score).ToString();
+
+        gameoverScoreText.text = ("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ "+(int)score).ToString();
         if (score > highScore)
         {
             highScore = (int)score;
-            highScoreText.text = ("High Score:" + highScore).ToString();
+            highScoreText.text = ("ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ "+ highScore).ToString();
         }
-
+        SoundManager.instance.SFXPlay("GameOver");
 
     }
 
@@ -131,8 +133,8 @@ public class GameManager : MonoBehaviour
         score = 0;
         totalCoin += newCoin;
         newCoin = 0;
-        totalCoinText.text = ("Total coin: " + totalCoin).ToString();
-        CoinText.text = ("Plus coin: " + newCoin).ToString();
+        totalCoinText.text = ("ï¿½ï¿½Ã¼ ï¿½ï¿½ " + totalCoin).ToString();
+        CoinText.text=("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ " + newCoin).ToString();
     }
 
     public int GetTotalCoin()
