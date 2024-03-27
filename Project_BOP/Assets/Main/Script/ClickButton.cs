@@ -11,6 +11,7 @@ public class ClickButton : MonoBehaviour
     public Image Black;
 
     // Define Panel
+    public GameObject LobbyUI;
     public GameObject GameStartPanel;
     public GameObject StorePanel;
     public GameObject CollectionPanel;
@@ -105,6 +106,7 @@ public class ClickButton : MonoBehaviour
         SceneManager.LoadScene("V2_Main_Scenes");
         GameManager.Instance.ActiveText();
         GameManager.Instance.isGameOver = false;
+        LobbyUI.SetActive(false);
 
     }
 
