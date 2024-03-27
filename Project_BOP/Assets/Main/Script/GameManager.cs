@@ -66,12 +66,12 @@ public class GameManager : MonoBehaviour
         if (!isGameOver)
         {
             score += (Time.deltaTime * 12);
-            scoreText.text = ("���� ���� "+(int)score).ToString();
+            scoreText.text = ("현재 점수: "+(int)score).ToString();
         }
         if (score > highScore)
         {
             highScore = (int)score;
-            highScoreText.text = ("�ְ� ���� " + highScore).ToString();
+            highScoreText.text = ("최고 점수: " + highScore).ToString();
         }
     }
     // ��ȭ ���� �Լ� ����
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
         {
             newCoin += addCoin;
 
-            CoinText.text = ("���� �� "+newCoin).ToString();
+            CoinText.text = ("얻은 코인: "+newCoin).ToString();
         }
 
     }
@@ -93,11 +93,11 @@ public class GameManager : MonoBehaviour
         gameoverUI.SetActive(true);
         gameoverCoinText.text = ("+ : " + newCoin).ToString();
 
-        gameoverScoreText.text = ("���� ���� "+(int)score).ToString();
+        gameoverScoreText.text = ("점수: "+(int)score).ToString();
         if (score > highScore)
         {
             highScore = (int)score;
-            highScoreText.text = ("�ְ� ���� "+ highScore).ToString();
+            highScoreText.text = ("최고 점수: "+ highScore).ToString();
         }
         SoundManager.instance.SFXPlay("GameOver");
 
@@ -133,8 +133,8 @@ public class GameManager : MonoBehaviour
         score = 0;
         totalCoin += newCoin;
         newCoin = 0;
-        totalCoinText.text = ("��ü �� " + totalCoin).ToString();
-        CoinText.text=("���� �� " + newCoin).ToString();
+        totalCoinText.text = ("전체 코인: " + totalCoin).ToString();
+        CoinText.text=("얻은 코인: " + newCoin).ToString();
     }
 
     public int GetTotalCoin()
@@ -159,11 +159,11 @@ public class GameManager : MonoBehaviour
     }
     public void BuyShield()
     {
-        shieldItem += 10;
+        shieldItem += 1;
     }
     public void BuyFlex()
     {
-        flexItem += 10;
+        flexItem += 1;
     }
 
     public void OnShieldToggleChanged(bool Value1)

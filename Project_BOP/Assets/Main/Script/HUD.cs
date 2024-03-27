@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,15 +14,17 @@ public class HUD : MonoBehaviour
     public int ShieldItem = 0;
     public int FlexItem = 0;
 
-    Text myText;
+    TMP_Text myText;
 
     private void Awake()
     {
-        myText = GetComponent<Text>();
+        myText = GetComponent<TMP_Text>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        BestScore = GameManager.Instance.GetHighscore();
+        Coin = GameManager.Instance.GetTotalCoin();
         switch (type)
         {
             case InfoType.BestScore:
@@ -46,7 +49,5 @@ public class HUD : MonoBehaviour
 
 
         }
-        BestScore = GameManager.Instance.GetHighscore();
-        Coin = GameManager.Instance.GetTotalCoin();
     }
 }

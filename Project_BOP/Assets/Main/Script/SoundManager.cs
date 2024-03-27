@@ -21,9 +21,8 @@ public class SoundManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(instance);
-            DontDestroyOnLoad(gameObject);
-
+            //DontDestroyOnLoad(instance);
+            //DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
