@@ -26,6 +26,10 @@ public  class CoinSpawner : MonoBehaviour
     }
     private void SpawnCoin()
     {
+        if (GameManager.Instance.isGameOver)
+        {
+            return;
+        }
         spawnPosX = Random.Range(10, 11);
         spawnPosY = Random.Range(-3f, 4);
 

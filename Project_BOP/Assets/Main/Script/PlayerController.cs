@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering.LookDev;
@@ -9,12 +10,11 @@ public class PlayerController : MonoBehaviour
     private float upwardForce = 2f;
     private bool shieldOn = false;
     private Rigidbody2D playerRigidbody; // Rigidbody2D to use
-    // private AudioSource playerAudio; // Audio component to use
     private Transform playerTransform;
     private Animator playerAnimator;
     private SpriteRenderer playerSpriteRenderer;
     public Sprite[] playerSprite;
-
+    private int playerSpriteIndex;
     public AudioClip die;
     public AudioClip shield;
     public AudioClip flex;
@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
         playerTransform = GetComponent<Transform>();
         playerAnimator = GetComponent<Animator>();
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
+        playerSpriteIndex = GameManager.Instance.GetCharacterNum();
+        PlayerSpriteChange(playerSpriteIndex);
     }
 
 
@@ -115,7 +117,7 @@ public class PlayerController : MonoBehaviour
                     SoundManager.instance.SFXPlay("BRKShield");
                     invisible = true;
                     playerSpriteRenderer.color = new Color(1, 1, 1, 0.4f);
-                    playerSpriteRenderer.sprite = playerSprite[0];
+                    PlayerSpriteChange(playerSpriteIndex);
                     shieldOn =false;
                     Invoke("ShieldOff", 2);
                 }
@@ -134,6 +136,13 @@ public class PlayerController : MonoBehaviour
         invisible = false;
     }
 
+    public  void PlayerSpriteChange(int index)
+    {
+        if(index==0)
+            playerSpriteRenderer.sprite = playerSprite[index];
+        else
+            playerSpriteRenderer.sprite = playerSprite[index+1];
+    }
 
 
 }

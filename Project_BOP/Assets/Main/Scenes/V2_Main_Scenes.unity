@@ -5527,6 +5527,8 @@ MonoBehaviour:
   playerSprite:
   - {fileID: -5225540622116197949, guid: c7e3e04409caf864f9b7fba94ebcb77d, type: 3}
   - {fileID: -5622901713081898559, guid: fe4d0517abba5224ea44d2d3677ff298, type: 3}
+  - {fileID: -247037112251525876, guid: 2a10385e319faca4c97ad2105e6a01a7, type: 3}
+  - {fileID: 8102358098348255977, guid: 93066b72c6118bf4b9f57a3dcf1d5e05, type: 3}
   die: {fileID: 8300000, guid: 49801596a90587744a5d473e05357f57, type: 3}
   shield: {fileID: 0}
   flex: {fileID: 0}

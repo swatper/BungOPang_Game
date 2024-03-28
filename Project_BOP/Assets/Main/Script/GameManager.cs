@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.ComponentModel;
 
 
 
@@ -33,6 +34,9 @@ public class GameManager : MonoBehaviour
     private int flexItem = 0;
     public Toggle shieldToggle; // Shield ���
     public Toggle flexToggle; // Flex ���
+    bool[] character = new bool[] { true, false, false };
+    private int characterNum;
+
 
     private void Start()
     {
@@ -206,5 +210,22 @@ public class GameManager : MonoBehaviour
         {
             flexToggle.interactable = true;
         }
+    }
+    public bool GetCharacterBool(int index)
+    {
+        return character[index];
+    }
+    public void SetCharacterBool(int index)
+    {
+        character[index]=true;
+    }
+
+    public void SetCharacterNum(int index)
+    {
+        characterNum = index;
+    }
+    public int GetCharacterNum() 
+    {
+        return characterNum;
     }
 }
