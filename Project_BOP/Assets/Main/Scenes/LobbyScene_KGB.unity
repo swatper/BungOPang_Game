@@ -1129,7 +1129,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -190.5825}
+  m_AnchoredPosition: {x: 201.75, y: -190.5825}
   m_SizeDelta: {x: 60, y: 81.165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &141610099
@@ -1354,7 +1354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -778.66504}
+  m_AnchoredPosition: {x: 201.75, y: -918.66504}
   m_SizeDelta: {x: 400, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &187234734
@@ -2338,7 +2338,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1854893453}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5017493
+  m_Size: 0.16767089
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2361,7 +2361,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: -17}
+  m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &257239843
 MonoBehaviour:
@@ -3314,7 +3314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -473.665}
+  m_AnchoredPosition: {x: 201.75, y: -473.665}
   m_SizeDelta: {x: 400, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &368751169
@@ -4029,8 +4029,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -601.16504}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: 201.75, y: -653.66504}
+  m_SizeDelta: {x: 400, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &457439113
 MonoBehaviour:
@@ -4301,7 +4301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -396.165}
+  m_AnchoredPosition: {x: 201.75, y: -396.165}
   m_SizeDelta: {x: 400, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &466961637
@@ -5133,8 +5133,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -651.16504}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: 201.75, y: -738.66504}
+  m_SizeDelta: {x: 400, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &573194616
 MonoBehaviour:
@@ -6489,6 +6489,18 @@ MonoBehaviour:
           m_StringArgument: ???(3)
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 598334169}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: SFXPlay
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Buy
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &702991362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7284,8 +7296,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -736.16504}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: 201.75, y: -858.66504}
+  m_SizeDelta: {x: 400, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &799140157
 MonoBehaviour:
@@ -8197,7 +8209,7 @@ MonoBehaviour:
           m_StringArgument: ???(1)
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 598334169}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: SFXPlay
         m_Mode: 5
@@ -8296,8 +8308,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -516.16504}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: 201.75, y: -533.66504}
+  m_SizeDelta: {x: 400, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &896701101
 MonoBehaviour:
@@ -9224,8 +9236,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -1071.165}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: 201.75, y: -1453.2535}
+  m_SizeDelta: {x: 349.6391, y: 373.7269}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &942641932
 MonoBehaviour:
@@ -9247,7 +9259,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: //////////
+  m_text: "\"Free UI Click Sound Pack\" by Unity Asset Store\nUser: SwishSwoosh\n\nsoundeffect-lab\n\nThanks
+    to, Mark DiAngelo\r\nFrom: http://soundbible.com/2067-Blop.html\r\n\r\nDistributor:
+    Stop worrying about music & free sound effects with Mewpot\u2019\r\nhttps://www.mewpot.com"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7e19203c3e9c655448aecff8479e9e2c, type: 2}
   m_sharedMaterial: {fileID: -8624621475617970014, guid: 7e19203c3e9c655448aecff8479e9e2c, type: 2}
@@ -10053,8 +10067,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -202, y: 275}
-  m_SizeDelta: {x: 404, y: 1096.165}
+  m_AnchoredPosition: {x: -202, y: 275.0001}
+  m_SizeDelta: {x: 403.5, y: 1640.1171}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1036996162
 MonoBehaviour:
@@ -10209,8 +10223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -943.66504}
-  m_SizeDelta: {x: 400, y: 35}
+  m_AnchoredPosition: {x: 201.75, y: -1123.7776}
+  m_SizeDelta: {x: 401.75, y: 45.2251}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1052291010
 MonoBehaviour:
@@ -11725,7 +11739,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -243.66501}
+  m_AnchoredPosition: {x: 201.75, y: -243.66501}
   m_SizeDelta: {x: 400, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222374432
@@ -12160,7 +12174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -100}
+  m_AnchoredPosition: {x: 201.75, y: -100}
   m_SizeDelta: {x: 400, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1252487258
@@ -12698,7 +12712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -135}
+  m_AnchoredPosition: {x: 201.75, y: -135}
   m_SizeDelta: {x: 400, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1302291093
@@ -14435,6 +14449,7 @@ GameObject:
   - component: {fileID: 1480151836}
   - component: {fileID: 1480151838}
   - component: {fileID: 1480151837}
+  - component: {fileID: 1480151839}
   m_Layer: 5
   m_Name: Logo4
   m_TagString: Untagged
@@ -14499,6 +14514,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480151835}
   m_CullTransparentMesh: 1
+--- !u!95 &1480151839
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480151835}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6c96dd73eab1ce640818e85801a83bf7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1482178829
 GameObject:
   m_ObjectHideFlags: 0
@@ -14919,7 +14956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -40}
+  m_AnchoredPosition: {x: 201.75, y: -40}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1573586456
@@ -15394,7 +15431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -866.16504}
+  m_AnchoredPosition: {x: 201.75, y: -1041.165}
   m_SizeDelta: {x: 400, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1609683600
@@ -16042,7 +16079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -316.165}
+  m_AnchoredPosition: {x: 201.75, y: -316.165}
   m_SizeDelta: {x: 400, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763558494
@@ -17541,7 +17578,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1126872681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.49825072}
+  m_AnchorMin: {x: 0, y: 0.8323291}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -17693,7 +17730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -436.165}
+  m_AnchoredPosition: {x: 201.75, y: -436.165}
   m_SizeDelta: {x: 400, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1871005162
@@ -18034,8 +18071,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -821.16504}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: 201.75, y: -978.66504}
+  m_SizeDelta: {x: 400, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880465091
 MonoBehaviour:
@@ -18057,7 +18094,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: /////////////
+  m_text: "\"\uC5C4\uB9C8\uAE4C\uD22C\uB9AC\uCCB4\" by \uC548\uB3D9\uC2DC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7e19203c3e9c655448aecff8479e9e2c, type: 2}
   m_sharedMaterial: {fileID: -8624621475617970014, guid: 7e19203c3e9c655448aecff8479e9e2c, type: 2}
@@ -18409,7 +18446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -558.66504}
+  m_AnchoredPosition: {x: 201.75, y: -593.66504}
   m_SizeDelta: {x: 400, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1907294917
@@ -19033,7 +19070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -1028.665}
+  m_AnchoredPosition: {x: 201.75, y: -1248.8901}
   m_SizeDelta: {x: 400, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2016130697
@@ -19608,7 +19645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -906.16504}
+  m_AnchoredPosition: {x: 201.75, y: -1081.165}
   m_SizeDelta: {x: 400, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2060180704
@@ -19804,6 +19841,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: ???(2)
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 598334169}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: SFXPlay
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Buy
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2065028294
@@ -20038,8 +20087,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -986.16504}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: 201.75, y: -1188.8901}
+  m_SizeDelta: {x: 401.75, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2095735871
 MonoBehaviour:
@@ -20061,7 +20110,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ///////////////
+  m_text: '"Casual Game BGM #5" by Unity Asset Store
+
+    User: B.G.M'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7e19203c3e9c655448aecff8479e9e2c, type: 2}
   m_sharedMaterial: {fileID: -8624621475617970014, guid: 7e19203c3e9c655448aecff8479e9e2c, type: 2}
@@ -20174,7 +20225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202, y: -693.66504}
+  m_AnchoredPosition: {x: 201.75, y: -798.66504}
   m_SizeDelta: {x: 400, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2115316709

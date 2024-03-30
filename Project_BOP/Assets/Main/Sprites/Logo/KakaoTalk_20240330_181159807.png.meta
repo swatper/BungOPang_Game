@@ -154,7 +154,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      KakaoTalk_20240330_181159807_0: 4788505763083801579
+      KakaoTalk_20240330_181159807_1: -583800906472622227
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
