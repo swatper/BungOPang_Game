@@ -11,11 +11,11 @@ public class ItemSpawner : MonoBehaviour
     private float spawnPosX;
     private float spawnPosY;
     public float itemSpeed = 10f;
-    private float seasonChangeTime = 11f;
+    private float seasonChangeTime = 16f;
 
     void Start()
     {
-        InvokeRepeating("SpawnItem", 3f, 1f);
+        InvokeRepeating("SpawnItem", 10f, 10f);
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class ItemSpawner : MonoBehaviour
         //SeasonChage and increase speed
         if (seasonChangeTime < 0f)
         {
-            seasonChangeTime = 11f;
+            seasonChangeTime = 16f;
             itemSpeed += 0.7f;
         }
     }

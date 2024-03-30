@@ -7,7 +7,7 @@ public class Swap_Ground : MonoBehaviour
 {
     public GameObject[] groundTilemaps;     //GroundTiles ObjectArray
     private int tileIndex = 0;              //Array's index
-    private float seasonChangeTime = 11f;    //Time to chage Season
+    private float seasonChangeTime = 16f;    //Time to chage Season
     public bool isGameOver = false;        //Check GamePlay Status
 
     private void FixedUpdate()
@@ -26,7 +26,7 @@ public class Swap_Ground : MonoBehaviour
         if (seasonChangeTime < 0f) {
             Invoke("ChangeGround",1.25f);
             //Reset Time
-            seasonChangeTime = 11f;
+            seasonChangeTime = 16f;
         }   
     }
     void ChangeGround() {

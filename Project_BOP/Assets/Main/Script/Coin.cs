@@ -34,7 +34,7 @@ public class Coin : MonoBehaviour
         if (GameManager.Instance.isGameOver) {
             return;
         }
-        transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
+        transform.Translate(Vector3.left * speed * Time.fixedDeltaTime, Space.World);
         if (transform.position.x < -10f)
         {
             Destroy(gameObject);

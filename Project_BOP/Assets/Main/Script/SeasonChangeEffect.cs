@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class SeasonChangeEffect : MonoBehaviour
 {
-    private float seasonChangeTime = 11f;    //Time to chage Season(same with season chage time)
+    private float seasonChangeTime = 16f;    //Time to chage Season(same with season chage time)
     public float waveSpeed;                 //Sprite moving speed(more than other BackGround Spitres' speed)
     public float upSpeed = 0.7f;            //Gap of Increase Speed
     public int ChangeTimes = 0;             //
@@ -21,7 +21,7 @@ public class SeasonChangeEffect : MonoBehaviour
             //Call Sprite;
             ChangeEffect();
             //Reset time
-            seasonChangeTime = 11f;
+            seasonChangeTime = 16f;
         }
     }
     void FixedUpdate()

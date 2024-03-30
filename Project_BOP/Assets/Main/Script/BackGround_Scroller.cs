@@ -9,7 +9,7 @@ public class BackGround_Scroller : MonoBehaviour
     public Sprite[] newObjextSprite01;       //Object's New Sprite Array
     public float playSpeed;                 //Speed of Ground      
     private int spriteIndex = 1;            //Sprite Array's index
-    private float seasonChangeTime = 11f;   //Time to chage Season
+    private float seasonChangeTime = 16f;   //Time to chage Season
     private GameObject playerObject;        //PlayerObject to check player's status
 
     void Start()
@@ -35,7 +35,7 @@ public class BackGround_Scroller : MonoBehaviour
         {
             //Call sprite change funtion, after 0.5 seconds later
             Invoke("ChangeSeason" , 1.25f);
-            seasonChangeTime = 11f;
+            seasonChangeTime = 16f;
             playSpeed += 0.7f;
         }
     }
@@ -45,7 +45,7 @@ public class BackGround_Scroller : MonoBehaviour
     {
         if (transform.position.x <= -18)
         {
-            transform.Translate(36f, 0, 0, Space.Self);
+            transform.Translate(35.8f, 0, 0, Space.Self);
         }
     }
 

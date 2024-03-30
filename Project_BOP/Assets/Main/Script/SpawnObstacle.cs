@@ -8,7 +8,7 @@ public class SpawnObstacle : MonoBehaviour
     public GameObject[] obstaclePrefab;     //Obstracle Array
     public float obstacleSpeed;
     public bool isGameOver = false;
-    private float seasonChangeTime = 11f;   //Time to chage Season
+    private float seasonChangeTime = 16f;   //Time to chage Season
 
     void Start()
     {
@@ -27,7 +27,7 @@ public class SpawnObstacle : MonoBehaviour
         seasonChangeTime -= Time.deltaTime;
         if (seasonChangeTime < 0f)
         {
-            seasonChangeTime = 11f;
+            seasonChangeTime = 16f;
             obstacleSpeed += 0.7f;
         }
     }
@@ -38,7 +38,7 @@ public class SpawnObstacle : MonoBehaviour
             return;
         }
         //Not to spawn obstacle
-        if (seasonChangeTime < 0.8f || seasonChangeTime > 9.5f)
+        if (seasonChangeTime < 1f || seasonChangeTime > 14f)
         {
             return;
         }

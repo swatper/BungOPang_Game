@@ -14,15 +14,15 @@ public  class CoinSpawner : MonoBehaviour
     private float spawnPosY;
     private int oldCoin;
     private int currentCoin=0;
-    private float levelUpTiming = 16f;
+    private float levelUpTiming = 32f;
     private float levelUpTimingDelta = 0;
     public float coinSpeed = 10f;
-    private float seasonChangeTime = 11f;   //Time to chage Season
+    private float seasonChangeTime = 16f;   //Time to chage Season
 
 
     void Start()
     {
-        InvokeRepeating("SpawnCoin", 3f, 0.7f);
+        InvokeRepeating("SpawnCoin", 2.8f, 0.4f);
     }
     private void SpawnCoin()
     {
@@ -66,7 +66,7 @@ public  class CoinSpawner : MonoBehaviour
         //SeasonChage and increase speed
         if (seasonChangeTime < 0f)
         {
-            seasonChangeTime = 11f;
+            seasonChangeTime = 16f;
             coinSpeed += 0.7f;
         }
     }
