@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
         {
             newCoin += addCoin;
 
-            CoinText.text = ("얻은 코인: "+newCoin).ToString();
+            CoinText.text = ("얻은 팥: "+newCoin).ToString();
         }
 
     }
@@ -137,8 +137,8 @@ public class GameManager : MonoBehaviour
         score = 0;
         totalCoin += newCoin;
         newCoin = 0;
-        totalCoinText.text = ("전체 코인: " + totalCoin).ToString();
-        CoinText.text=("얻은 코인: " + newCoin).ToString();
+        totalCoinText.text = ("전체 팥: " + totalCoin).ToString();
+        CoinText.text=("얻은 팥: " + newCoin).ToString();
     }
 
     public int GetTotalCoin()
