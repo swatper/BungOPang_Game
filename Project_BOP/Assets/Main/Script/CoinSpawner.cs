@@ -87,7 +87,7 @@ public  class CoinSpawner : MonoBehaviour
                 newCoinslist.RemoveAt(i); // 리스트에서 null인 코인 제거
             }
         }
-        Invoke("RollbackCoin", 10);
+        Invoke("RollbackCoin", 6);
     }
 
     private void RollbackCoin()
