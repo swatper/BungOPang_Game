@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public GameObject LobbyUI;
     public float score = 0;
     public int newCoin = 0;
-    private int totalCoin = 99999;
+    private int totalCoin = 0;
     private int highScore = 0;
     public bool shieldON = false;
     public bool flexON = false;

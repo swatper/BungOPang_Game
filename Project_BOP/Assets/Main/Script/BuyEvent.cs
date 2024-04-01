@@ -20,14 +20,19 @@ public class BuyEvent : MonoBehaviour
         {
             // Store
             case "shield":
-                Debug.Log("+1 Shield");
-                GameManager.Instance.UseMoney(100);
-                GameManager.Instance.BuyShield();
+                if (GameManager.Instance.GetTotalCoin() >= 100)
+                {
+                    GameManager.Instance.UseMoney(100);
+                    GameManager.Instance.BuyShield();
+                }
                 break;
 
             case "flex":
-                GameManager.Instance.UseMoney(100);
-                GameManager.Instance.BuyFlex();
+                if (GameManager.Instance.GetTotalCoin() >= 100)
+                {
+                    GameManager.Instance.UseMoney(100);
+                    GameManager.Instance.BuyFlex();
+                }
                 break;
 
             // Collection
@@ -47,25 +52,27 @@ public class BuyEvent : MonoBehaviour
                 break;
 
             case "???(2)":
-                if (!GameManager.Instance.GetCharacterBool(1))
-                {
-                    GameManager.Instance.SetCharacterBool(1);
-                    GameManager.Instance.UseMoney(500);
-                }
-                else if (GameManager.Instance.GetCharacterBool(1))
-                {
-                    if (GameManager.Instance.GetCharacterNum() != 1)
+                    if (!GameManager.Instance.GetCharacterBool(1))
                     {
-                        GameManager.Instance.SetCharacterNum(1);
+                        if (GameManager.Instance.GetTotalCoin() >= 500)
+                        {
+                            GameManager.Instance.SetCharacterBool(1);
+                            GameManager.Instance.UseMoney(500);
+                        }
                     }
-                }
+                    else if (GameManager.Instance.GetCharacterBool(1))
+                    {
+                        if (GameManager.Instance.GetCharacterNum() != 1)
+                        {
+                            GameManager.Instance.SetCharacterNum(1);
+                        }
+                    }
                 break;
 
             case "???(3)":
                 if (!GameManager.Instance.GetCharacterBool(2))
                 {
-                    Debug.Log("700");
-                    if (GameManager.Instance.GetTotalCoin() >= 700)
+                    if (GameManager.Instance.GetTotalCoin() >= 900)
                     {
                         GameManager.Instance.SetCharacterBool(2);
                         GameManager.Instance.UseMoney(900);
