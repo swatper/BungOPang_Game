@@ -12200,7 +12200,7 @@ GameObject:
   - component: {fileID: 1234828760}
   - component: {fileID: 1234828761}
   m_Layer: 0
-  m_Name: Sound_UI 1_0
+  m_Name: Sound_UI_Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12263,7 +12263,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -8182964098947307210, guid: a2752aaf3325f6b4b85afce08aa9510a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
