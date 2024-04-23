@@ -11,7 +11,6 @@ public class PlatformEndPosition : MonoBehaviour
         PlatformMove other = collision.GetComponent<PlatformMove>();
         if(other != null)
         {
-            Debug.Log(other);
             platformManager.MovePlatformStartPosition(other.gameObject);
         }
     }

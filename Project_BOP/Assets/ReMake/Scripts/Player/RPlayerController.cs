@@ -22,4 +22,13 @@ public class RPlayerController : MonoBehaviour
         rigid.velocity = Vector2.up * jumpPower;
         anim.SetTrigger("IsJump");
     }
+
+    //Coin이나 Item을 먹었을때
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.TryGetComponent(out IEatAble eatAble))
+        {
+            eatAble.Eat();
+        }
+    }
 }
