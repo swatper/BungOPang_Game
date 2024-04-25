@@ -11,15 +11,17 @@ public class ItemManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-    }
-
+    }   //ΩÃ±€≈Ê
     public void AddEatAble(IEatAble eatAble)
     {
         eatAbles.Add(eatAble);
     }
-
     public void RemoveEatAble(IEatAble eatAble)
     {
         eatAbles.Remove(eatAble);
+    }
+    public void TeleportItem()
+    {
+
     }
 }

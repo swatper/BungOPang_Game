@@ -9,16 +9,14 @@ public class CoinDatas : MonoBehaviour
     private void Awake()
     {
         instance = this;
-    }
-
+    } //싱글톤
     public enum CoinType
     {
         Bronze,
         Sliver,
         Gold,
         Rainbow,
-    }
-    
+    } // 코인 타입 정의
     public static int GetScore(CoinType type)
     {
         switch (type)
@@ -34,5 +32,5 @@ public class CoinDatas : MonoBehaviour
             default:
                 return 0;
         }
-    }
+    } //코인 타입에 따른 점수 반환
 }

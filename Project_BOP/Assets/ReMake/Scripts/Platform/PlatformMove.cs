@@ -12,7 +12,6 @@ public class PlatformMove : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
     }
-
     private void FixedUpdate()
     {
         rigid.velocity = Vector2.left * speed;
