@@ -8,6 +8,10 @@ public class ItemManager : MonoBehaviour
 
     public List<IEatAble> eatAbles = new List<IEatAble>();
 
+    //코인 스폰 위치 리스트
+    [SerializeField]
+    private List<Transform> coinTransform;
+
     private void Awake()
     {
         instance = this;
@@ -15,13 +19,15 @@ public class ItemManager : MonoBehaviour
     public void AddEatAble(IEatAble eatAble)
     {
         eatAbles.Add(eatAble);
+        TeleportItem(eatAble);
     }
     public void RemoveEatAble(IEatAble eatAble)
     {
         eatAbles.Remove(eatAble);
     }
-    public void TeleportItem()
+    private void TeleportItem(IEatAble eatAble)
     {
-
-    }
+        int rand = Random.Range(0, coinTransform.Count);
+        eatAble.Teleport(coinTransform[rand]);
+    }   //아이템 위치 이동
 }

@@ -11,7 +11,12 @@ public class PlatformEndPosition : MonoBehaviour
         PlatformMove other = collision.GetComponent<PlatformMove>();
         if(other != null)
         {
+            if (collision.GetComponent<IEatAble>() != null){
+                collision.gameObject.SetActive(false);
+                return;
+            }
+          
             platformManager.MovePlatformStartPosition(other.gameObject);
         }
-    }
+    }   //플랫폼이 끝에 도달하면 플랫폼의 시작 위치로 이동
 }
