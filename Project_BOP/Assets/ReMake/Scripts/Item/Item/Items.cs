@@ -2,16 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coins : MonoBehaviour, IEatAble
+public class Items : MonoBehaviour, IEatAble
 {
-    [SerializeField] CoinDatas.CoinType type;   //코인 타입 지정
+    [SerializeField]private ItemDatas.ItemType type;
 
-    private int score;
-
-    private void Start()
-    {
-        score = CoinDatas.GetScore(type);
-    }
     private void OnEnable()
     {
         ItemManager.instance.AddEatAble(this);
@@ -21,12 +15,28 @@ public class Coins : MonoBehaviour, IEatAble
         ItemManager.instance.RemoveEatAble(this);
     }   //ItemManager에서 제거
     public void Eat()
-    {   
-        GameManagers.instance.AddScore(score);
+    {
+        switch (type)
+        {
+            case ItemDatas.ItemType.FeverTime:
+                FeverTimeItem();
+                break;
+            case ItemDatas.ItemType.Shield:
+                ShieldItem();
+                break;
+        }
         gameObject.SetActive(false);
     }
     public void Teleport(Transform position)
     {
         transform.position = position.position;
+    }
+    private void FeverTimeItem()
+    {
+        GameManagers.instance.StartFeverTime();
+    }
+    private void ShieldItem()
+    {
+
     }
 }

@@ -13,7 +13,6 @@ public class ObjectPooling : MonoBehaviour
     }   //오브젝트 타입 정의
     ObjectType type;   //오브젝트 타입 변수
 
-    
     public static ObjectPooling instance;   //싱글톤
     private List<GameObject>[] pools;    //GameObject를 담을 리스트
 
