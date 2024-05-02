@@ -11,7 +11,7 @@ public class PlatformEndPosition : MonoBehaviour
         PlatformMove other = collision.GetComponent<PlatformMove>();
         if(other != null)
         {
-            if (collision.GetComponent<IEatAble>() != null){
+            if (collision.GetComponent<IEatAble>() != null || collision.GetComponent<IObstacle>() != null){
                 collision.gameObject.SetActive(false);
                 return;
             }

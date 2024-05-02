@@ -5,6 +5,7 @@ using UnityEngine;
 public class RPlayerController : MonoBehaviour
 {
     [SerializeField] Sprite shieldSprite;    //쉴드 스프라이트
+    Sprite saveSprite;
     SpriteRenderer spriteRenderer;  //스프라이트 렌더러
     Rigidbody2D rigid;  //물리
     Animator anim;  //애니메이션
@@ -32,7 +33,7 @@ public class RPlayerController : MonoBehaviour
     private IEnumerator Shield()
     {
         //쉴드 Sprite 할당
-        Sprite saveSprite = spriteRenderer.sprite;
+        saveSprite = spriteRenderer.sprite;
         spriteRenderer.sprite = shieldSprite;
         isShield = true;
 
@@ -40,7 +41,6 @@ public class RPlayerController : MonoBehaviour
 
         spriteRenderer.sprite = saveSprite;
         isShield = false;
-        System.GC.Collect();    //가비지 컬렉션 요청
     }   //쉴드 코루틴
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -48,6 +48,17 @@ public class RPlayerController : MonoBehaviour
         {
             eatAble.Eat();
         }
-        //if(collision.TryGetComponent(out IObstacle obstacle)) //장애물 충돌
+        if(collision.TryGetComponent(out IObstacle obstacle)) //장애물 충돌
+        {
+            if (isShield)
+            {
+                StopCoroutine(Shield());
+                spriteRenderer.sprite = saveSprite;
+                isShield = false;
+                return;
+            }   //실드 상태일 때
+
+            GameManagers.instance.GameOver();
+        }
     }   //Player 충돌 처리
 }

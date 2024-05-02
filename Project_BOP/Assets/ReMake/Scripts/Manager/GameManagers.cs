@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,7 @@ public class GameManagers : MonoBehaviour
         GameOver,
     }   //게임 레벨 정의
     public RPlayerController player;
+    [Header("게임 진행 정보")]
     [SerializeField] private GameState gameState;   //게임 상태
     [SerializeField] private int score;  //점수
     [SerializeField] private float time = 0;    //게임 시간
@@ -50,6 +52,10 @@ public class GameManagers : MonoBehaviour
         yield return new WaitForSeconds(10f);
         gameState = saveGameState;
     }   //피버타임
+    public void GameOver()
+    {
+        Debug.Log("게임 오버");
+    }
 
     //임시코드
     public void SpawnCoin()
@@ -80,6 +86,10 @@ public class GameManagers : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             ObjectPooling.instance.Get(5);
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            ObjectPooling.instance.Get(6);
         }
     }   //space키를 누르면 gameState를 1씩 증가
 }

@@ -10,7 +10,7 @@ public class ItemManager : MonoBehaviour
 
     //코인 스폰 위치 리스트
     [SerializeField]
-    private List<Transform> coinTransform;
+    private List<Transform> itemTransform;
 
     private void Awake()
     {
@@ -27,7 +27,7 @@ public class ItemManager : MonoBehaviour
     }
     private void TeleportItem(IEatAble eatAble)
     {
-        int rand = Random.Range(0, coinTransform.Count);
-        eatAble.Teleport(coinTransform[rand]);
+        int rand = Random.Range(0, itemTransform.Count);
+        eatAble.Teleport(itemTransform[rand]);
     }   //아이템 위치 이동
 }
