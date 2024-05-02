@@ -14,6 +14,7 @@ public class GameManagers : MonoBehaviour
         FeverTime,
         GameOver,
     }   //게임 레벨 정의
+    public RPlayerController player;
     [SerializeField] private GameState gameState;   //게임 상태
     [SerializeField] private int score;  //점수
     [SerializeField] private float time = 0;    //게임 시간
@@ -75,6 +76,10 @@ public class GameManagers : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             ObjectPooling.instance.Get(4);
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            ObjectPooling.instance.Get(5);
         }
     }   //space키를 누르면 gameState를 1씩 증가
 }

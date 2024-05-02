@@ -34,9 +34,9 @@ public class Items : MonoBehaviour, IEatAble
     private void FeverTimeItem()
     {
         GameManagers.instance.StartFeverTime();
-    }
+    }   //FeverTime 아이템 사용
     private void ShieldItem()
     {
-
-    }
+        GameManagers.instance.player.OnShield();
+    }   //Shield 아이템 사용
 }
